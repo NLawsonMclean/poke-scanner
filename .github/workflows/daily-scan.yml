@@ -1,0 +1,42 @@
+# Save this as  .github/workflows/daily-scan.yml  in your repo.
+# Runs the scanner every morning (no PC needed), publishes the dashboard to
+# GitHub Pages, and — if you add the email secrets — emails you the day's deals.
+name: Daily Pokemon deal scan
+
+on:
+  schedule:
+    - cron: "0 7 * * *"    # 07:00 UTC = 08:00 UK. Change if you like.
+  workflow_dispatch:         # a "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write            # lets the run commit the fresh dashboard data
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install requests
+
+      - name: Run scanner
+        env:
+          EBAY_CLIENT_ID:            ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET:        ${{ secrets.EBAY_CLIENT_SECRET }}
+          ALERT_EMAIL_TO:            ${{ secrets.ALERT_EMAIL_TO }}
+          ALERT_EMAIL_FROM:          ${{ secrets.ALERT_EMAIL_FROM }}
+          ALERT_EMAIL_APP_PASSWORD:  ${{ secrets.ALERT_EMAIL_APP_PASSWORD }}
+        run: python poke_deal_scanner.py
+
+      # Commit the fresh dashboard.json (what the website reads) and the state
+      # file (remembers seen items + builds the price trend). GitHub Pages then
+      # serves the updated site automatically.
+      - name: Publish results
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Daily scan results"
+          file_pattern: dashboard.json scanner_state.json
