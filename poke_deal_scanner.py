@@ -41,72 +41,127 @@ from urllib.parse import quote
 import requests
 
 # ============================================================================
-# 1. YOUR WATCHLIST  --  edit freely. This is the only part you normally touch.
+# 1. YOUR WATCHLIST -- one line per card. This is the only part you edit.
 # ----------------------------------------------------------------------------
-# Each card is checked against every returned listing's TITLE so only the exact
-# card/edition/language counts toward the median and deals. Fields:
-#   query      : words sent to eBay (broad net; the matcher does the precision).
-#   must       : ALL of these must be in the title. An entry that is a LIST means
-#                "at least one of these" (alternatives), e.g. set name OR number.
-#   edition    : "1st" (title must say 1st Edition and NOT Unlimited),
-#                "unlimited" (must NOT say 1st Edition), or "any".
-#   language   : "en" (drops Japanese listings) or "jp" (requires a JP/vending cue).
-#   exclude    : extra title words that disqualify a listing (card-specific).
-#   require_nm : drop visibly damaged/played copies (raw-only NM preference).
-#   fair_gbp   : your baseline in GBP; None = use the median of matched listings.
-#   note       : just for you; printed in the report.
-# A global block-list (graded slabs, lots, "choose your card", sealed, proxies,
-# etc.) is applied to every card -- see GLOBAL_EXCLUDE below.
+# Every set/number below is verified against the PkmnCards illustrator database.
+#   name/set : how it shows on the dashboard
+#   q        : words sent to eBay        must : ALL must appear in the title
+#              (a nested list = "any one of these")
+#   ed       : "1st" | "unlimited" | "any"      lang : "en" | "jp"
+#   var      : "reverse" (reverse holo) | "holo" | "regular" (no holo) | "any"
+#   img      : pokemontcg.io code for the reference thumbnail ("" = none)
+# RULE OF THUMB: 1st Edition only exists in English up to Neo Destiny (2002);
+# reverse holos only exist from 2002 onward. So vintage = regular, modern = reverse.
 # ============================================================================
-WATCHLIST = [
-    {"query": "Slowpoke Neo Genesis 73 1st Edition",
-     "must": ["slowpoke", ["neo genesis", "73/111"]], "edition": "1st", "language": "en",
-     "require_nm": True, "fair_gbp": None, "note": "Komiya, EN"},
+CARDS = [
+ # --- vintage English: 1st Edition possible, no reverse holo exists ---
+ dict(name="Slowpoke", set="Neo Genesis 73/111 · 1st Ed", q="Slowpoke Neo Genesis 73 1st Edition",
+      must=["slowpoke",["neo genesis","73/111"]], ed="1st", lang="en", var="any", img="neo1/73", note="Komiya"),
+ dict(name="Pokémon March", set="Neo Genesis 102/111 · Trainer · 1st Ed", q="Pokemon March Neo Genesis 102 1st Edition",
+      must=["march",["neo genesis","102/111"]], ed="1st", lang="en", var="any", img="neo1/102", note="Komiya, Trainer"),
+ dict(name="Delibird", set="Neo Revelation 5/64 · Holo · 1st Ed", q="Delibird Neo Revelation 5/64 Holo 1st Edition",
+      must=["delibird",["neo revelation","5/64"],["holo","holographic","holofoil"]], ed="1st", lang="en",
+      var="holo", excl=["non-holo","non holo","nonholo"], img="neo3/5", note="Komiya"),
+ dict(name="Octillery", set="Neo Revelation 34/64 · 1st Ed", q="Octillery Neo Revelation 34 1st Edition",
+      must=["octillery",["neo revelation","34/64"]], ed="1st", lang="en", var="any", img="neo3/34", note="Komiya"),
+ dict(name="Light Slowbro", set="Neo Destiny 51/105 · 1st Ed", q="Light Slowbro Neo Destiny 51 1st Edition",
+      must=["light slowbro",["neo destiny","51/105"]], ed="1st", lang="en", var="any", img="neo4/51", note="Komiya"),
+ dict(name="Dark Omastar", set="Neo Destiny 19/105 · 1st Ed", q="Dark Omastar Neo Destiny 19 1st Edition",
+      must=["dark omastar",["neo destiny","19/105"]], ed="1st", lang="en", var="any", img="neo4/19", note="Komiya"),
+ dict(name="Dark Omanyte", set="Neo Destiny 37/105 · 1st Ed", q="Dark Omanyte Neo Destiny 37 1st Edition",
+      must=["dark omanyte",["neo destiny","37/105"]], ed="1st", lang="en", var="any", img="neo4/37", note="Komiya"),
+ dict(name="Ledyba", set="Neo Destiny 71/105 · 1st Ed · Common", q="Ledyba Neo Destiny 71 1st Edition",
+      must=["ledyba",["neo destiny","71/105"]], ed="1st", lang="en", var="regular", img="neo4/71", note="Komiya"),
+ dict(name="Light Machamp", set="Neo Destiny 25/105 · 1st Ed", q="Light Machamp Neo Destiny 25 1st Edition",
+      must=["light machamp",["neo destiny","25/105"]], ed="1st", lang="en", var="any", img="neo4/25", note="illus. Miki Tanaka"),
+ dict(name="Smeargle", set="Wizards Black Star Promo #32", q="Smeargle Black Star Promo 32",
+      must=["smeargle",["promo","32"]], ed="any", lang="en", var="any", img="basep/32", note="Komiya, promo"),
 
-    {"query": "Light Slowbro Neo Destiny 51 1st Edition",
-     "must": ["light slowbro", ["neo destiny", "51/105"]], "edition": "1st", "language": "en",
-     "require_nm": True, "fair_gbp": None, "note": "Komiya, EN"},
+ # --- e-Card era English (2002-03): no 1st Ed; reverse holo preferred ---
+ dict(name="Cubone", set="Expedition 103/165 · Rev Holo", q="Cubone Expedition 103 reverse holo",
+      must=["cubone",["expedition","103/165"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard1/103", note="Komiya"),
+ dict(name="Pidgey", set="Expedition 123/165 · Rev Holo", q="Pidgey Expedition 123 reverse holo",
+      must=["pidgey",["expedition","123/165"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard1/123", note="Komiya"),
+ dict(name="Hitmonchan", set="Aquapolis 81/147 · Rev Holo", q="Hitmonchan Aquapolis 81 reverse holo",
+      must=["hitmonchan",["aquapolis","81/147"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard2/81", note="Komiya"),
+ dict(name="Tyrogue", set="Aquapolis 63/147 · Rev Holo", q="Tyrogue Aquapolis 63 reverse holo",
+      must=["tyrogue",["aquapolis","63/147"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard2/63", note="Komiya"),
+ dict(name="Hitmontop", set="Aquapolis 82/147 · Rev Holo", q="Hitmontop Aquapolis 82 reverse holo",
+      must=["hitmontop",["aquapolis","82/147"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard2/82", note="Komiya"),
+ dict(name="Dugtrio", set="Skyridge 52/144 · Rev Holo", q="Dugtrio Skyridge 52 reverse holo",
+      must=["dugtrio",["skyridge","52/144"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard3/52", note="Komiya"),
 
-    {"query": "Dark Omastar Neo Destiny 19 1st Edition",
-     "must": ["dark omastar", ["neo destiny", "19/105"]], "edition": "1st", "language": "en",
-     "require_nm": True, "fair_gbp": None, "note": "Komiya, EN"},
+ # --- EX era English (2003-07): reverse holo preferred ---
+ dict(name="Magnemite", set="EX Dragon 61/97 · Rev Holo", q="Magnemite EX Dragon 61 reverse holo",
+      must=["magnemite",["dragon","61/97"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex3/61", note="Komiya - verify vs Trainer Kit"),
+ dict(name="Exeggcute", set="EX FireRed & LeafGreen 33/112 · Rev Holo", q="Exeggcute FireRed LeafGreen 33 reverse holo",
+      must=["exeggcute",["firered","leafgreen","33/112"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex6/33", note="Komiya"),
+ dict(name="Swinub", set="EX Team Rocket Returns 79/109 · Rev Holo", q="Swinub Team Rocket Returns 79 reverse holo",
+      must=["swinub",["team rocket returns","79/109"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex7/79", note="Komiya"),
+ dict(name="Wingull", set="EX Deoxys 81/107 · Rev Holo", q="Wingull EX Deoxys 81 reverse holo",
+      must=["wingull",["deoxys","81/107"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex8/81", note="Komiya"),
+ dict(name="Pelipper", set="EX Deoxys 21/107 · Rev Holo", q="Pelipper EX Deoxys 21 reverse holo",
+      must=["pelipper",["deoxys","21/107"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex8/21", note="Komiya"),
+ dict(name="Miltank", set="EX Unseen Forces 42/115 · Rev Holo", q="Miltank Unseen Forces 42 reverse holo",
+      must=["miltank",["unseen forces","42/115"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex11/42", note="Komiya"),
+ dict(name="Sandshrew", set="EX Delta Species 82/113 · Rev Holo", q="Sandshrew Delta Species 82 reverse holo",
+      must=["sandshrew",["delta species","82/113"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex13/82", note="Komiya"),
+ dict(name="Drowzee", set="EX Delta Species 67/113 · Rev Holo", q="Drowzee Delta Species 67 reverse holo",
+      must=["drowzee",["delta species","67/113"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex13/67", note="Komiya"),
+ dict(name="Dugtrio (CG)", set="EX Crystal Guardians 5/100 · Rev Holo", q="Dugtrio Crystal Guardians 5 reverse holo",
+      must=["dugtrio",["crystal guardians","5/100"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex14/5", note="Komiya"),
 
-    {"query": "Dark Omanyte Neo Destiny 37 1st Edition",
-     "must": ["dark omanyte", ["neo destiny", "37/105"]], "edition": "1st", "language": "en",
-     "require_nm": True, "fair_gbp": None, "note": "Komiya, EN"},
+ # --- XY / Sun&Moon / Sword&Shield English: reverse holo preferred ---
+ dict(name="Exeggcute (ROS)", set="Roaring Skies 1/108 · Rev Holo", q="Exeggcute Roaring Skies 1 reverse holo",
+      must=["exeggcute",["roaring skies","1/108"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="xy6/1", note="Komiya"),
+ dict(name="Gulpin", set="Generations RC12 · fork-balancing", q="Gulpin Generations Radiant Collection RC12",
+      must=["gulpin",["rc12","rc 12","radiant collection"]], ed="any", lang="en", var="any",
+      excl=["stellar","sv7"], img="g1/RC12", note="Komiya"),
+ dict(name="Clefairy", set="BREAKpoint 81/122 · Rev Holo", q="Clefairy BREAKpoint 81 reverse holo",
+      must=["clefairy",["breakpoint","81/122"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="xy9/81", note="Komiya"),
+ dict(name="Hypno", set="BREAKpoint 51/122 · Rev Holo", q="Hypno BREAKpoint 51 reverse holo",
+      must=["hypno",["breakpoint","51/122"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="xy9/51", note="Komiya"),
+ dict(name="Nosepass", set="Guardians Rising 69/145 · Rev Holo", q="Nosepass Guardians Rising 69 reverse holo",
+      must=["nosepass",["guardians rising","69/145"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="sm2/69", note="Komiya"),
+ dict(name="Plusle", set="Shining Legends 33/73 · Rev Holo", q="Plusle Shining Legends 33 reverse holo",
+      must=["plusle",["shining legends","33/73"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="sm35/33", note="Komiya"),
+ dict(name="Onix", set="Lost Thunder 109/214 · Rev Holo", q="Onix Lost Thunder 109 reverse holo",
+      must=["onix",["lost thunder","109/214"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="sm8/109", note="Komiya"),
+ dict(name="Wailmer", set="Cosmic Eclipse 45/236 · Rev Holo", q="Wailmer Cosmic Eclipse 45 reverse holo",
+      must=["wailmer",["cosmic eclipse","45/236"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="sm12/45", note="Komiya"),
+ dict(name="Croconaw", set="Fusion Strike 056/264 · Rev Holo", q="Croconaw Fusion Strike 56 reverse holo",
+      must=["croconaw",["fusion strike","056/264","56/264"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="swsh8/56", note="Komiya"),
+ dict(name="Farfetch'd", set="Brilliant Stars 115/172 · Rev Holo", q="Farfetchd Brilliant Stars 115 reverse holo",
+      must=["farfetch",["brilliant stars","115/172"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="swsh9/115", note="Komiya"),
 
-    {"query": "Light Machamp Neo Destiny 25 1st Edition",
-     "must": ["light machamp", ["neo destiny", "25/105"]], "edition": "1st", "language": "en",
-     "require_nm": True, "fair_gbp": None, "note": "illus. Miki Tanaka"},
-
-    {"query": "Snorlax Pokemon vending glossy Japanese",
-     "must": ["snorlax", ["vending", "glossy", "expansion sheet"]], "edition": "any", "language": "jp",
-     "exclude": ["neo", "jungle", "base set", "celebrations", "skyridge"],
-     "require_nm": True, "fair_gbp": None, "note": "JP vending series"},
-
-    {"query": "Gulpin Generations Radiant Collection RC12",
-     "must": ["gulpin", ["rc12", "rc 12", "radiant collection"]], "edition": "any", "language": "en",
-     "exclude": ["stellar", "sv7", "sv07"],   # blocks the modern Jerky-art Gulpins
-     "require_nm": True, "fair_gbp": None, "note": "Komiya, fork-balancing, EN"},
-
-    {"query": "Pokemon March Neo Genesis 102 Trainer 1st Edition",
-     "must": ["march", ["neo genesis", "102/111"]], "edition": "1st", "language": "en",
-     "require_nm": True, "fair_gbp": None, "note": "Trainer card, Komiya"},
-
-    {"query": "Delibird Neo Revelation 5/64 Holo 1st Edition",
-     "must": ["delibird", ["neo revelation", "5/64"], ["holo", "holographic", "holofoil"]],
-     "edition": "1st", "language": "en",
-     "exclude": ["non-holo", "non holo", "nonholo"],   # 'holo' is a substring of 'non-holo'
-     "require_nm": True, "fair_gbp": None, "note": "Komiya, EN holo"},
-
-    {"query": "Growlithe Pokemon vending glossy Japanese",
-     "must": ["growlithe", ["vending", "glossy", "expansion sheet"]], "edition": "any", "language": "jp",
-     "require_nm": True, "fair_gbp": None, "note": "JP Vending S3 only - no EN / no 1st Ed"},
-
-    {"query": "Exeggcute Roaring Skies 1/108",
-     "must": ["exeggcute", ["roaring skies", "1/108"]], "edition": "any", "language": "en",
-     "require_nm": True, "fair_gbp": None, "note": "Komiya, EN, no 1st Ed"},
+ # --- Japanese-only (no English print exists) ---
+ dict(name="Snorlax", set="JP Vending series · glossy", q="Snorlax Japanese vending glossy Pokemon",
+      must=["snorlax",["vending","glossy","expansion sheet"]], ed="any", lang="jp", var="any", img="", note="JP vending"),
+ dict(name="Growlithe", set="JP Vending S3 · glossy", q="Growlithe Japanese vending glossy Pokemon",
+      must=["growlithe",["vending","glossy","expansion sheet"]], ed="any", lang="jp", var="any", img="", note="JP vending, no EN"),
+ dict(name="Weedle", set="JP Vending series · glossy", q="Weedle Japanese vending glossy Pokemon",
+      must=["weedle",["vending","glossy","expansion sheet"]], ed="any", lang="jp", var="any", img="", note="JP vending"),
+ dict(name="Onix (JP)", set="JP Vending series · glossy", q="Onix Japanese vending glossy Pokemon",
+      must=["onix",["vending","glossy","expansion sheet"]], ed="any", lang="jp", var="any", img="", note="JP vending"),
+ dict(name="Seadra", set="JP Vending series · glossy", q="Seadra Japanese vending glossy Pokemon",
+      must=["seadra",["vending","glossy","expansion sheet"]], ed="any", lang="jp", var="any", img="", note="JP vending"),
+ dict(name="Janine's Arbok", set="JP VS series · 1st Ed", q="Janine's Arbok VS Japanese 1st Edition",
+      must=["arbok",["janine","anzu","vs series"," vs "]], ed="any", lang="jp", var="any", img="", note="JP VS, no EN"),
+ dict(name="Janine's Weezing", set="JP VS series · 1st Ed", q="Janine's Weezing VS Japanese 1st Edition",
+      must=["weezing",["janine","anzu","vs series"," vs "]], ed="any", lang="jp", var="any", img="", note="JP VS, no EN"),
+ dict(name="Janine's Shuckle", set="JP VS series · 1st Ed", q="Janine's Shuckle VS Japanese 1st Edition",
+      must=["shuckle",["janine","anzu","vs series"," vs "]], ed="any", lang="jp", var="any", img="", note="JP VS, no EN"),
+ dict(name="Psyduck (JP)", set="JP promo", q="Psyduck Japanese promo Komiya Pokemon",
+      must=["psyduck"], ed="any", lang="jp", var="any", img="", note="JP promo - verify"),
+ dict(name="Bellsprout (JP)", set="JP EX era", q="Bellsprout Japanese Pokemon card",
+      must=["bellsprout"], ed="any", lang="jp", var="any", img="", note="JP - verify set"),
+ dict(name="Tyrogue (JP)", set="JP e-Card era", q="Tyrogue Japanese Pokemon card e-card",
+      must=["tyrogue"], ed="any", lang="jp", var="any", img="", note="JP - verify set"),
 ]
+
+WATCHLIST = [{"query": c["q"], "must": c["must"], "edition": c["ed"], "language": c["lang"],
+              "variant": c["var"], "exclude": c.get("excl", []), "require_nm": True,
+              "fair_gbp": None, "note": c["note"]} for c in CARDS]
 
 # Applied to EVERY card. These are the usual median-polluters for vintage singles.
 GLOBAL_EXCLUDE = [
@@ -175,6 +230,25 @@ def search_ebay(token, marketplace, query, item_location=None):
     out = []
     for it in r.json().get("itemSummaries", []) or []:
         price = it.get("price", {}) or {}
+        # Some listings (multi-variation, "see price in cart", certain auction
+        # formats) return no price. Skip them -- defaulting to 0 would poison the
+        # median and make every one look like a -100% deal.
+        pval = price.get("value")
+        try:
+            pval = float(pval)
+        except (TypeError, ValueError):
+            continue
+        if pval <= 0:
+            continue
+        # For auctions, prefer the live current bid when eBay supplies it.
+        bid = (it.get("currentBidPrice") or {}).get("value")
+        try:
+            bid = float(bid)
+        except (TypeError, ValueError):
+            bid = None
+        opts = it.get("buyingOptions") or []
+        if bid and bid > 0 and "AUCTION" in opts:
+            pval = bid
         ship = 0.0
         for s in (it.get("shippingOptions") or []):
             sc = (s.get("shippingCost") or {}).get("value")
@@ -184,11 +258,13 @@ def search_ebay(token, marketplace, query, item_location=None):
         out.append({
             "id": it.get("itemId"),
             "title": it.get("title", ""),
-            "price": float(price.get("value", 0) or 0),
+            "price": pval,
             "currency": price.get("currency", "GBP"),
             "shipping": ship,
             "condition": (it.get("condition") or "").lower(),
-            "buying": ",".join(it.get("buyingOptions") or []),
+            "buying": ",".join(opts),
+            "bids": it.get("bidCount", 0) or 0,
+            "ends": it.get("itemEndDate", "") or "",
             "seller_country": (it.get("itemLocation") or {}).get("country", ""),
             "url": it.get("itemWebUrl", ""),
             "image": (it.get("image") or {}).get("imageUrl", ""),
@@ -294,6 +370,16 @@ def matches(listing, card):
         return False
     if ed == "unlimited" and is_first:
         return False
+    # 4b) variant: reverse holo / holo / plain regular
+    var = card.get("variant", "any")
+    is_rev = ("reverse" in t) or ("rev holo" in t) or ("rev. holo" in t)
+    is_holo = (("holo" in t) or ("foil" in t)) and "non-holo" not in t and "non holo" not in t
+    if var == "reverse" and not is_rev:
+        return False
+    if var == "holo" and (not is_holo or is_rev):
+        return False
+    if var == "regular" and (is_rev or is_holo):
+        return False
     # 5) must-have terms (a list entry = at least one of the alternatives)
     for m in card.get("must", []):
         if isinstance(m, (list, tuple)):
@@ -390,17 +476,11 @@ def verify_nm(token, listings):
 # Reference card art (public Pokemon TCG database). Used for the dashboard
 # thumbnail when a live eBay listing image isn't available. Vending cards
 # aren't in this database, so they fall back to a placeholder.
-REF_IMAGES = {
-    "Slowpoke Neo Genesis 73 1st Edition":            "https://images.pokemontcg.io/neo1/73.png",
-    "Light Slowbro Neo Destiny 51 1st Edition":       "https://images.pokemontcg.io/neo4/51.png",
-    "Dark Omastar Neo Destiny 19 1st Edition":        "https://images.pokemontcg.io/neo4/19.png",
-    "Dark Omanyte Neo Destiny 37 1st Edition":        "https://images.pokemontcg.io/neo4/37.png",
-    "Light Machamp Neo Destiny 25 1st Edition":       "https://images.pokemontcg.io/neo4/25.png",
-    "Pokemon March Neo Genesis 102 Trainer 1st Edition": "https://images.pokemontcg.io/neo1/102.png",
-    "Delibird Neo Revelation 5/64 Holo 1st Edition":  "https://images.pokemontcg.io/neo3/5.png",
-    "Gulpin Generations Radiant Collection RC12":     "https://images.pokemontcg.io/g1/RC12.png",
-    "Exeggcute Roaring Skies 1/108":                  "https://images.pokemontcg.io/ros/1.png",
-}
+DISPLAY = {c["q"]: (c["name"], c["set"]) for c in CARDS}
+
+
+REF_IMAGES = {c["q"]: f"https://images.pokemontcg.io/{c['img']}.png"
+              for c in CARDS if c.get("img")}
 
 
 def load_targets():
@@ -472,18 +552,41 @@ def run():
             print("   (nothing genuine for this exact card)")
             continue
 
-        prices = sorted(card_gbp(l) for l in uniq)
+        # --- split the two markets: auctions are in-progress, BIN is firm ---
+        auctions = [l for l in uniq if "AUCTION" in l["buying"]]
+        bins     = [l for l in uniq if "FIXED_PRICE" in l["buying"] and "AUCTION" not in l["buying"]]
+
+        def stats(group):
+            ps = sorted(p for p in (card_gbp(l) for l in group) if p > 0)
+            if not ps:
+                return None
+            cheap = min(group, key=card_gbp)
+            return {"count": len(ps), "median_gbp": round(statistics.median(ps)),
+                    "cheapest_gbp": round(ps[0]), "url": cheap["url"],
+                    "bids": cheap.get("bids", 0), "ends": cheap.get("ends", "")}
+
+        a_stats, b_stats = stats(auctions), stats(bins)
+
+        prices = sorted(p for p in (card_gbp(l) for l in uniq) if p > 0)
+        if not prices:
+            print("   (no usable prices for this card)")
+            continue
         median = statistics.median(prices)
-        baseline = targets.get(q) or card["fair_gbp"] or median
+        # Baseline prefers Buy-It-Now: a half-finished auction understates value.
+        market = b_stats["median_gbp"] if b_stats else median
+        baseline = targets.get(q) or card["fair_gbp"] or market
         state["history"].setdefault(q, []).append({"date": today, "median_gbp": round(median, 2)})
 
-        print(f"   {len(uniq)} listings | median card £{median:.0f} "
-              f"| baseline £{baseline:.0f} | cheapest card £{prices[0]:.0f}")
+        a_txt = f"auction £{a_stats['median_gbp']} ({a_stats['count']})" if a_stats else "auction -"
+        b_txt = f"BIN £{b_stats['median_gbp']} ({b_stats['count']})" if b_stats else "BIN -"
+        print(f"   {len(uniq)} listings | {a_txt} | {b_txt} | baseline £{baseline:.0f}")
 
         cheapest = min(uniq, key=card_gbp)
         card_deals = []
         for l in uniq:
             price = card_gbp(l)
+            if price <= 0 or baseline <= 0:
+                continue
             if price <= baseline * (1 - DISCOUNT_THRESHOLD):
                 disc = round((1 - price / baseline) * 100)
                 bd = cost_breakdown(l)
@@ -499,11 +602,16 @@ def run():
 
         best = max(card_deals, key=lambda d: d["discount_pct"]) if card_deals else None
         rep = best if best else cheapest       # representative listing for the breakdown
+        disp = DISPLAY.get(q, (q, ""))
         dashboard_cards.append({
             "query": q,
+            "name": disp[0],
+            "set": disp[1],
             "note": card["note"],
             "median_gbp": round(median),
             "cheapest_gbp": round(prices[0]),
+            "auction": a_stats,
+            "bin": b_stats,
             "listings": len(uniq),
             "deal_count": len(card_deals),
             "best_discount_pct": best["discount_pct"] if best else 0,
