@@ -85,10 +85,10 @@ CARDS = [
       must=["pidgey",["expedition","123/165"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard1/123", note="Komiya"),
  dict(name="Hitmonchan", set="Aquapolis 81/147 · Rev Holo", q="Hitmonchan Aquapolis 81 reverse holo",
       must=["hitmonchan",["aquapolis","81/147"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard2/81", note="Komiya"),
- dict(name="Tyrogue", set="Aquapolis 63/147 · Rev Holo", q="Tyrogue Aquapolis 63 reverse holo",
-      must=["tyrogue",["aquapolis","63/147"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard2/63", note="Komiya"),
- dict(name="Hitmontop", set="Aquapolis 82/147 · Rev Holo", q="Hitmontop Aquapolis 82 reverse holo",
-      must=["hitmontop",["aquapolis","82/147"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard2/82", note="Komiya"),
+ dict(name="Tyrogue (JP)", set="JP e-Card era · set TBC", q="Tyrogue Japanese Pokemon card",
+      must=["tyrogue"], ed="any", lang="jp", var="any", img="", note="JP - confirm set/number"),
+ dict(name="Hitmontop (JP)", set="JP e-Card era · set TBC", q="Hitmontop Japanese Pokemon card",
+      must=["hitmontop"], ed="any", lang="jp", var="any", img="", note="JP - confirm set/number"),
  dict(name="Dugtrio", set="Skyridge 52/144 · Rev Holo", q="Dugtrio Skyridge 52 reverse holo",
       must=["dugtrio",["skyridge","52/144"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard3/52", note="Komiya"),
 
@@ -147,17 +147,18 @@ CARDS = [
  dict(name="Seadra", set="JP Vending series · glossy", q="Seadra Japanese vending glossy Pokemon",
       must=["seadra",["vending","glossy","expansion sheet"]], ed="any", lang="jp", var="any", img="", note="JP vending"),
  dict(name="Janine's Arbok", set="JP VS series · 1st Ed", q="Janine's Arbok VS Japanese 1st Edition",
-      must=["arbok",["janine","anzu","vs series"," vs "]], ed="any", lang="jp", var="any", img="", note="JP VS, no EN"),
+      must=["arbok",["janine","anzu","vs series","vs pokemon","pokemon vs"]], ed="any", lang="jp",
+      var="any", excl=["team magma","team aqua","vs seeker"], img="", note="JP VS, no EN"),
  dict(name="Janine's Weezing", set="JP VS series · 1st Ed", q="Janine's Weezing VS Japanese 1st Edition",
-      must=["weezing",["janine","anzu","vs series"," vs "]], ed="any", lang="jp", var="any", img="", note="JP VS, no EN"),
+      must=["weezing",["janine","anzu","vs series","vs pokemon","pokemon vs"]], ed="any", lang="jp",
+      var="any", excl=["team magma","team aqua","vs seeker"], img="", note="JP VS, no EN"),
  dict(name="Janine's Shuckle", set="JP VS series · 1st Ed", q="Janine's Shuckle VS Japanese 1st Edition",
-      must=["shuckle",["janine","anzu","vs series"," vs "]], ed="any", lang="jp", var="any", img="", note="JP VS, no EN"),
+      must=["shuckle",["janine","anzu","vs series","vs pokemon","pokemon vs"]], ed="any", lang="jp",
+      var="any", excl=["team magma","team aqua","vs seeker"], img="", note="JP VS, no EN"),
  dict(name="Psyduck (JP)", set="JP promo", q="Psyduck Japanese promo Komiya Pokemon",
       must=["psyduck"], ed="any", lang="jp", var="any", img="", note="JP promo - verify"),
  dict(name="Bellsprout (JP)", set="JP EX era", q="Bellsprout Japanese Pokemon card",
       must=["bellsprout"], ed="any", lang="jp", var="any", img="", note="JP - verify set"),
- dict(name="Tyrogue (JP)", set="JP e-Card era", q="Tyrogue Japanese Pokemon card e-card",
-      must=["tyrogue"], ed="any", lang="jp", var="any", img="", note="JP - verify set"),
 ]
 
 WATCHLIST = [{"query": c["q"], "must": c["must"], "edition": c["ed"], "language": c["lang"],
@@ -385,10 +386,15 @@ def matches(listing, card):
             return False
     # 3) language
     lang = card.get("language", "en")
-    if lang == "en" and ("japanese" in t or "japan " in t):
+    if lang == "en" and ("japanese" in t or "japan " in t or "jpn" in t):
         return False
-    if lang == "jp" and not any(k in t for k in ("japanese", "japan", "vending", "glossy")):
-        return False
+    if lang == "jp":
+        # Must carry a real Japanese signal. NOTE: "glossy" is deliberately not
+        # accepted here -- English listings use it too, so allowing it let
+        # English cards through as Japanese ones. "Vending" is safe: the vending
+        # series was Japan-only.
+        if not any(k in t for k in ("japanese", "japan", "jpn", "vending", "日本")):
+            return False
     # 4) edition
     ed = card.get("edition", "any")
     is_first = any(f in t for f in FIRST_ED)
