@@ -57,24 +57,25 @@ import requests
 CARDS = [
  # --- vintage English: 1st Edition possible, no reverse holo exists ---
  dict(name="Slowpoke", set="Neo Genesis 73/111 · 1st Ed", q="Slowpoke Neo Genesis 73 1st Edition",
-      must=["slowpoke",["neo genesis","73/111"]], ed="1st", lang="en", var="any", img="neo1/73", note="Komiya"),
+      must=["slowpoke",["neo genesis","73/111"]], ed="1st", lang="en", var="any", img="neo1/73", orig=True, note="Komiya"),
  dict(name="Pokémon March", set="Neo Genesis 102/111 · Trainer · 1st Ed", q="Pokemon March Neo Genesis 102 1st Edition",
-      must=["march",["neo genesis","102/111"]], ed="1st", lang="en", var="any", img="neo1/102", note="Komiya, Trainer"),
+      must=["march",["neo genesis","102/111"]], ed="1st", lang="en", var="any", img="neo1/102", orig=True, note="Komiya, Trainer"),
  dict(name="Delibird", set="Neo Revelation 5/64 · Holo · 1st Ed", q="Delibird Neo Revelation 5/64 Holo 1st Edition",
       must=["delibird",["neo revelation","5/64"],["holo","holographic","holofoil"]], ed="1st", lang="en",
-      var="holo", excl=["non-holo","non holo","nonholo"], img="neo3/5", note="Komiya"),
+      var="holo", excl=["non-holo","non holo","nonholo"], img="neo3/5", orig=True, note="Komiya"),
  dict(name="Octillery", set="Neo Revelation 34/64 · 1st Ed", q="Octillery Neo Revelation 34 1st Edition",
       must=["octillery",["neo revelation","34/64"]], ed="1st", lang="en", var="any", img="neo3/34", note="Komiya"),
  dict(name="Light Slowbro", set="Neo Destiny 51/105 · 1st Ed", q="Light Slowbro Neo Destiny 51 1st Edition",
-      must=["light slowbro",["neo destiny","51/105"]], ed="1st", lang="en", var="any", img="neo4/51", note="Komiya"),
+      must=["light slowbro",["neo destiny","51/105"]], ed="1st", lang="en", var="any", img="neo4/51", orig=True, note="Komiya"),
  dict(name="Dark Omastar", set="Neo Destiny 19/105 · 1st Ed", q="Dark Omastar Neo Destiny 19 1st Edition",
-      must=["dark omastar",["neo destiny","19/105"]], ed="1st", lang="en", var="any", img="neo4/19", note="Komiya"),
+      must=["dark omastar",["neo destiny","19/105"]], ed="1st", lang="en", var="any", img="neo4/19", orig=True, note="Komiya"),
  dict(name="Dark Omanyte", set="Neo Destiny 37/105 · 1st Ed", q="Dark Omanyte Neo Destiny 37 1st Edition",
-      must=["dark omanyte",["neo destiny","37/105"]], ed="1st", lang="en", var="any", img="neo4/37", note="Komiya"),
+      must=["dark omanyte",["neo destiny","37/105"]], ed="1st", lang="en", var="any", img="neo4/37", orig=True, note="Komiya"),
  dict(name="Ledyba", set="Neo Destiny 71/105 · 1st Ed · Common", q="Ledyba Neo Destiny 71 1st Edition",
       must=["ledyba",["neo destiny","71/105"]], ed="1st", lang="en", var="regular", img="neo4/71", note="Komiya"),
  dict(name="Light Machamp", set="Neo Destiny 25/105 · 1st Ed", q="Light Machamp Neo Destiny 25 1st Edition",
-      must=["light machamp",["neo destiny","25/105"]], ed="1st", lang="en", var="any", img="neo4/25", note="illus. Miki Tanaka"),
+      must=["light machamp",["neo destiny","25/105"]], ed="1st", lang="en", var="any",
+      img="neo4/25", orig=True, note="illus. Miki Tanaka"),
  dict(name="Smeargle", set="Wizards Black Star Promo #32", q="Smeargle Black Star Promo 32",
       must=["smeargle",["black star","wizards","promo"],["32","#32"]], ed="any", lang="en", var="any", img="basep/32", note="Komiya, promo"),
 
@@ -85,10 +86,12 @@ CARDS = [
       must=["pidgey",["expedition","123/165"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard1/123", note="Komiya"),
  dict(name="Hitmonchan", set="Aquapolis 81/147 · Rev Holo", q="Hitmonchan Aquapolis 81 reverse holo",
       must=["hitmonchan",["aquapolis","81/147"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard2/81", note="Komiya"),
- dict(name="Tyrogue (JP)", set="JP e-Card era · set TBC", q="Tyrogue Japanese Pokemon card",
-      must=["tyrogue"], ed="any", lang="jp", var="any", img="", note="JP - confirm set/number"),
- dict(name="Hitmontop (JP)", set="JP e-Card era · set TBC", q="Hitmontop Japanese Pokemon card",
-      must=["hitmontop"], ed="any", lang="jp", var="any", img="", note="JP - confirm set/number"),
+ dict(name="Tyrogue", set="Aquapolis 63/147 · Rev Holo", q="Tyrogue Aquapolis 63 reverse holo",
+      must=["tyrogue",["aquapolis","63/147"],["reverse","rev holo"]], ed="any", lang="en",
+      var="reverse", img="ecard2/63", note="Komiya"),
+ dict(name="Hitmontop", set="Aquapolis 82/147 · Rev Holo", q="Hitmontop Aquapolis 82 reverse holo",
+      must=["hitmontop",["aquapolis","82/147"],["reverse","rev holo"]], ed="any", lang="en",
+      var="reverse", img="ecard2/82", note="Komiya"),
  dict(name="Dugtrio", set="Skyridge 52/144 · Rev Holo", q="Dugtrio Skyridge 52 reverse holo",
       must=["dugtrio",["skyridge","52/144"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ecard3/52", note="Komiya"),
 
@@ -114,10 +117,10 @@ CARDS = [
 
  # --- XY / Sun&Moon / Sword&Shield English: reverse holo preferred ---
  dict(name="Exeggcute (ROS)", set="Roaring Skies 1/108 · Rev Holo", q="Exeggcute Roaring Skies 1 reverse holo",
-      must=["exeggcute",["roaring skies","1/108"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="xy6/1", note="Komiya"),
+      must=["exeggcute",["roaring skies","1/108"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="xy6/1", orig=True, note="Komiya"),
  dict(name="Gulpin", set="Generations RC12 · fork-balancing", q="Gulpin Generations Radiant Collection RC12",
       must=["gulpin",["rc12","rc 12","radiant collection"]], ed="any", lang="en", var="any",
-      excl=["stellar","sv7"], img="g1/RC12", note="Komiya"),
+      excl=["stellar","sv7"], img="g1/RC12", orig=True, note="Komiya"),
  dict(name="Clefairy", set="BREAKpoint 81/122 · Rev Holo", q="Clefairy BREAKpoint 81 reverse holo",
       must=["clefairy",["breakpoint","81/122"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="xy9/81", note="Komiya"),
  dict(name="Hypno", set="BREAKpoint 51/122 · Rev Holo", q="Hypno BREAKpoint 51 reverse holo",
@@ -137,9 +140,9 @@ CARDS = [
 
  # --- Japanese-only (no English print exists) ---
  dict(name="Snorlax", set="JP Vending series · glossy", q="Snorlax Japanese vending glossy Pokemon",
-      must=["snorlax",["vending","glossy","expansion sheet"]], ed="any", lang="jp", var="any", img="", note="JP vending"),
+      must=["snorlax",["vending","glossy","expansion sheet"]], ed="any", lang="jp", var="any", img="", orig=True, note="JP vending"),
  dict(name="Growlithe", set="JP Vending S3 · glossy", q="Growlithe Japanese vending glossy Pokemon",
-      must=["growlithe",["vending","glossy","expansion sheet"]], ed="any", lang="jp", var="any", img="", note="JP vending, no EN"),
+      must=["growlithe",["vending","glossy","expansion sheet"]], ed="any", lang="jp", var="any", img="", orig=True, note="JP vending, no EN"),
  dict(name="Weedle", set="JP Vending series · glossy", q="Weedle Japanese vending glossy Pokemon",
       must=["weedle",["vending","glossy","expansion sheet"]], ed="any", lang="jp", var="any", img="", note="JP vending"),
  dict(name="Onix (JP)", set="JP Vending series · glossy", q="Onix Japanese vending glossy Pokemon",
@@ -157,8 +160,9 @@ CARDS = [
       var="any", excl=["team magma","team aqua","vs seeker"], img="", note="JP VS, no EN"),
  dict(name="Psyduck (JP)", set="JP promo", q="Psyduck Japanese promo Komiya Pokemon",
       must=["psyduck"], ed="any", lang="jp", var="any", img="", note="JP promo - verify"),
- dict(name="Bellsprout (JP)", set="JP EX era", q="Bellsprout Japanese Pokemon card",
-      must=["bellsprout"], ed="any", lang="jp", var="any", img="", note="JP - verify set"),
+ dict(name="Bellsprout", set="EX FireRed & LeafGreen 53/112 · Rev Holo", q="Bellsprout FireRed LeafGreen 53 reverse holo",
+      must=["bellsprout",["firered","leafgreen","53/112"],["reverse","rev holo"]], ed="any", lang="en",
+      var="reverse", img="ex6/53", note="Komiya"),
 ]
 
 WATCHLIST = [{"query": c["q"], "must": c["must"], "edition": c["ed"], "language": c["lang"],
@@ -547,12 +551,59 @@ def save_state(state):
 # ============================================================================
 # 6. MAIN
 # ============================================================================
+
+def komiya_sense_check():
+    """Sanity-check the cards added from the illustrator research.
+
+    Applies ONLY to cards without orig=True. The original hand-picked list is
+    exempt -- those were chosen deliberately and aren't all Komiya (e.g. Light
+    Machamp is by Miki Tanaka and is wanted anyway)."""
+    verified = {
+        ("slowpoke","neo genesis"), ("pokemon march","neo genesis"),
+        ("delibird","neo revelation"), ("octillery","neo revelation"),
+        ("light slowbro","neo destiny"), ("dark omastar","neo destiny"),
+        ("dark omanyte","neo destiny"), ("ledyba","neo destiny"),
+        ("smeargle","black star"), ("machamp","black star"),
+        ("cubone","expedition"), ("pidgey","expedition"),
+        ("hitmonchan","aquapolis"), ("tyrogue","aquapolis"), ("hitmontop","aquapolis"),
+        ("dugtrio","skyridge"), ("magnemite","dragon"),
+        ("exeggcute","firered"), ("bellsprout","firered"),
+        ("swinub","team rocket returns"),
+        ("wingull","deoxys"), ("pelipper","deoxys"),
+        ("miltank","unseen forces"), ("sandshrew","delta species"),
+        ("drowzee","delta species"), ("dugtrio","crystal guardians"),
+        ("exeggcute","roaring skies"), ("gulpin","generations"),
+        ("clefairy","breakpoint"), ("hypno","breakpoint"),
+        ("nosepass","guardians rising"), ("plusle","shining legends"),
+        ("onix","lost thunder"), ("wailmer","cosmic eclipse"),
+        ("croconaw","fusion strike"), ("farfetch","brilliant stars"),
+    }
+    suspect = []
+    for c in CARDS:
+        if c["lang"] != "en" or c.get("orig"):
+            continue    # JP prints aren't in the EN database; originals are exempt
+        base = c["name"].split(" (")[0].strip().lower().replace("\u00e9", "e")
+        setl = c["set"].lower()
+        if not any(n in base and k in setl for n, k in verified):
+            suspect.append(f"{c['name']} ({c['set']})")
+    if suspect:
+        print("  ! NOT VERIFIED AS KOMIYA -- check these:")
+        for x in suspect:
+            print(f"      {x}")
+    else:
+        print("  all newly-added English cards verified as Komiya artwork")
+    return suspect
+
+
 def run():
     cid = os.environ.get("EBAY_CLIENT_ID")
     secret = os.environ.get("EBAY_CLIENT_SECRET")
     if not cid or not secret:
         raise SystemExit("Set EBAY_CLIENT_ID and EBAY_CLIENT_SECRET first "
                          "(see the README).")
+
+    print("\nKomiya sense-check:")
+    komiya_sense_check()
 
     refresh_fx()
     token = get_ebay_token(cid, secret)
