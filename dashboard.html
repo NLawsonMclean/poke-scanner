@@ -90,6 +90,19 @@
   .tgt input:focus{outline:none; border-color:var(--gold)}
   .under{color:var(--green)}
 
+  .mkts{display:flex; gap:10px; margin-top:9px; flex-wrap:wrap}
+  .mkt{font-family:"IBM Plex Mono",monospace; border:1px solid var(--line);
+    border-radius:10px; padding:6px 10px; min-width:118px; background:var(--panel-2)}
+  .mkt .mlbl{display:block; font-size:10px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--dim)}
+  .mkt .mval{display:block; font-size:17px; font-weight:600; margin-top:1px}
+  .mkt .mlow{display:block; font-size:10.5px; color:var(--dim); margin-top:1px}
+  .mkt.bin{border-color:rgba(70,227,155,.35)}
+  .mkt.bin .mval{color:var(--green)}
+  .mkt.auc{border-color:rgba(242,193,78,.35)}
+  .mkt.auc .mval{color:var(--gold)}
+  .mkt.none .mval{color:var(--dim); font-weight:400}
+
   .cost{margin-top:8px; font-family:"IBM Plex Mono",monospace; font-size:11px;
     color:var(--muted); line-height:1.65}
   .cost .ck{color:var(--dim)}
@@ -175,17 +188,17 @@ function cost(cardv,ship,src){const base=cardv+ship;
 
 // Sample data renders instantly. Load your dashboard.json for live numbers.
 const SAMPLE={updated:"sample", dest:"UK", fx_note:"USD→GBP 0.743, JPY→GBP 0.0050", sample:true, cards:[
- {query:"Slowpoke Neo Genesis 73 1st Edition", name:"Slowpoke", set:"Neo Genesis 73/111 · 1st Ed", image:IMG+"neo1/73.png", median_gbp:55, cheapest_gbp:51, listings:9, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:45, cost:cost(51,4,"US"), history:hist(46,55)},
- {query:"Light Slowbro Neo Destiny 51 1st Edition", name:"Light Slowbro", set:"Neo Destiny 51/105 · 1st Ed", image:IMG+"neo4/51.png", median_gbp:40, cheapest_gbp:37, listings:6, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(37,3,"GB"), history:hist(35,40)},
- {query:"Dark Omastar Neo Destiny 19 1st Edition", name:"Dark Omastar", set:"Neo Destiny 19/105 · 1st Ed", image:IMG+"neo4/19.png", median_gbp:22, cheapest_gbp:20, listings:14, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(20,3,"US"), history:hist(19,22)},
- {query:"Dark Omanyte Neo Destiny 37 1st Edition", name:"Dark Omanyte", set:"Neo Destiny 37/105 · 1st Ed", image:IMG+"neo4/37.png", median_gbp:18, cheapest_gbp:16, listings:12, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(16,3,"US"), history:hist(15,18)},
- {query:"Light Machamp Neo Destiny 25 1st Edition", name:"Light Machamp", set:"Neo Destiny 25/105 · 1st Ed", image:IMG+"neo4/25.png", median_gbp:30, cheapest_gbp:28, listings:8, deal_count:0, best_discount_pct:0, komiya:false, note:"illus. Miki Tanaka", target_gbp:null, cost:cost(28,3,"GB"), history:hist(31,30)},
- {query:"Snorlax Pokemon vending glossy Japanese", name:"Snorlax", set:"Japanese Vending series", image:"", median_gbp:45, cheapest_gbp:41, listings:5, deal_count:0, best_discount_pct:0, komiya:false, note:"", target_gbp:null, cost:cost(41,6,"JP"), history:hist(38,45)},
- {query:"Gulpin Generations Radiant Collection RC12", name:"Gulpin", set:"Generations RC12 · fork-balancing", image:IMG+"g1/RC12.png", median_gbp:12, cheapest_gbp:8, listings:11, deal_count:1, best_discount_pct:32, best_url:"https://www.ebay.co.uk/sch/i.html?_nkw=Gulpin+RC12", komiya:true, note:"", target_gbp:10, cost:cost(8,3,"US"), history:hist(10,12)},
- {query:"Pokemon March Neo Genesis 102 Trainer 1st Edition", name:"Pokémon March", set:"Neo Genesis 102/111 · 1st Ed · Trainer", image:IMG+"neo1/102.png", median_gbp:16, cheapest_gbp:15, listings:7, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(15,3,"GB"), history:hist(14,16)},
- {query:"Delibird Neo Revelation 5/64 Holo 1st Edition", name:"Delibird", set:"Neo Revelation 5/64 · Holo · 1st Ed", image:IMG+"neo3/5.png", median_gbp:35, cheapest_gbp:25, listings:10, deal_count:1, best_discount_pct:27, best_url:"https://www.ebay.co.uk/sch/i.html?_nkw=Delibird+Neo+Revelation+holo", komiya:true, note:"", target_gbp:30, cost:cost(25,4,"US"), history:hist(30,35)},
- {query:"Growlithe Pokemon vending glossy Japanese", name:"Growlithe", set:"Japanese Vending S3 (glossy)", image:"", median_gbp:25, cheapest_gbp:23, listings:4, deal_count:0, best_discount_pct:0, komiya:true, note:"JP vending only", target_gbp:null, cost:cost(23,5,"JP"), history:hist(22,25)},
- {query:"Exeggcute Roaring Skies 1/108", name:"Exeggcute", set:"XY Roaring Skies 1/108", image:IMG+"ros/1.png", median_gbp:4, cheapest_gbp:3, listings:20, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(3,2,"US"), history:hist(4,4)},
+ {query:"Slowpoke Neo Genesis 73 1st Edition", name:"Slowpoke", set:"Neo Genesis 73/111 · 1st Ed", image:IMG+"neo1/73.png", median_gbp:55, cheapest_gbp:51, listings:9, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:45, cost:cost(51,4,"US"), auction:{count:3,median_gbp:38,cheapest_gbp:51,url:"https://www.ebay.co.uk/",bids:3,ends:""}, bin:{count:6,median_gbp:61,cheapest_gbp:52,url:"https://www.ebay.co.uk/",bids:0,ends:""}, history:hist(46,55)},
+ {query:"Light Slowbro Neo Destiny 51 1st Edition", name:"Light Slowbro", set:"Neo Destiny 51/105 · 1st Ed", image:IMG+"neo4/51.png", median_gbp:40, cheapest_gbp:37, listings:6, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(37,3,"GB"), auction:{count:2,median_gbp:28,cheapest_gbp:37,url:"https://www.ebay.co.uk/",bids:3,ends:""}, bin:{count:4,median_gbp:44,cheapest_gbp:37,url:"https://www.ebay.co.uk/",bids:0,ends:""}, history:hist(35,40)},
+ {query:"Dark Omastar Neo Destiny 19 1st Edition", name:"Dark Omastar", set:"Neo Destiny 19/105 · 1st Ed", image:IMG+"neo4/19.png", median_gbp:22, cheapest_gbp:20, listings:14, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(20,3,"US"), auction:{count:4,median_gbp:15,cheapest_gbp:20,url:"https://www.ebay.co.uk/",bids:3,ends:""}, bin:{count:10,median_gbp:24,cheapest_gbp:20,url:"https://www.ebay.co.uk/",bids:0,ends:""}, history:hist(19,22)},
+ {query:"Dark Omanyte Neo Destiny 37 1st Edition", name:"Dark Omanyte", set:"Neo Destiny 37/105 · 1st Ed", image:IMG+"neo4/37.png", median_gbp:18, cheapest_gbp:16, listings:12, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(16,3,"US"), auction:{count:4,median_gbp:13,cheapest_gbp:16,url:"https://www.ebay.co.uk/",bids:3,ends:""}, bin:{count:8,median_gbp:20,cheapest_gbp:17,url:"https://www.ebay.co.uk/",bids:0,ends:""}, history:hist(15,18)},
+ {query:"Light Machamp Neo Destiny 25 1st Edition", name:"Light Machamp", set:"Neo Destiny 25/105 · 1st Ed", image:IMG+"neo4/25.png", median_gbp:30, cheapest_gbp:28, listings:8, deal_count:0, best_discount_pct:0, komiya:false, note:"illus. Miki Tanaka", target_gbp:null, cost:cost(28,3,"GB"), auction:{count:2,median_gbp:21,cheapest_gbp:28,url:"https://www.ebay.co.uk/",bids:3,ends:""}, bin:{count:6,median_gbp:33,cheapest_gbp:28,url:"https://www.ebay.co.uk/",bids:0,ends:""}, history:hist(31,30)},
+ {query:"Snorlax Pokemon vending glossy Japanese", name:"Snorlax", set:"Japanese Vending series", image:"", median_gbp:45, cheapest_gbp:41, listings:5, deal_count:0, best_discount_pct:0, komiya:false, note:"", target_gbp:null, cost:cost(41,6,"JP"), auction:{count:1,median_gbp:31,cheapest_gbp:41,url:"https://www.ebay.co.uk/",bids:3,ends:""}, bin:{count:4,median_gbp:50,cheapest_gbp:42,url:"https://www.ebay.co.uk/",bids:0,ends:""}, history:hist(38,45)},
+ {query:"Gulpin Generations Radiant Collection RC12", name:"Gulpin", set:"Generations RC12 · fork-balancing", image:IMG+"g1/RC12.png", median_gbp:12, cheapest_gbp:8, listings:11, deal_count:1, best_discount_pct:32, best_url:"https://www.ebay.co.uk/sch/i.html?_nkw=Gulpin+RC12", komiya:true, note:"", target_gbp:10, cost:cost(8,3,"US"), auction:{count:3,median_gbp:8,cheapest_gbp:8,url:"https://www.ebay.co.uk/",bids:3,ends:""}, bin:{count:8,median_gbp:13,cheapest_gbp:11,url:"https://www.ebay.co.uk/",bids:0,ends:""}, history:hist(10,12)},
+ {query:"Pokemon March Neo Genesis 102 Trainer 1st Edition", name:"Pokémon March", set:"Neo Genesis 102/111 · 1st Ed · Trainer", image:IMG+"neo1/102.png", median_gbp:16, cheapest_gbp:15, listings:7, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(15,3,"GB"), auction:{count:2,median_gbp:11,cheapest_gbp:15,url:"https://www.ebay.co.uk/",bids:3,ends:""}, bin:{count:5,median_gbp:18,cheapest_gbp:15,url:"https://www.ebay.co.uk/",bids:0,ends:""}, history:hist(14,16)},
+ {query:"Delibird Neo Revelation 5/64 Holo 1st Edition", name:"Delibird", set:"Neo Revelation 5/64 · Holo · 1st Ed", image:IMG+"neo3/5.png", median_gbp:35, cheapest_gbp:25, listings:10, deal_count:1, best_discount_pct:27, best_url:"https://www.ebay.co.uk/sch/i.html?_nkw=Delibird+Neo+Revelation+holo", komiya:true, note:"", target_gbp:30, cost:cost(25,4,"US"), auction:{count:3,median_gbp:24,cheapest_gbp:25,url:"https://www.ebay.co.uk/",bids:3,ends:""}, bin:{count:7,median_gbp:38,cheapest_gbp:32,url:"https://www.ebay.co.uk/",bids:0,ends:""}, history:hist(30,35)},
+ {query:"Growlithe Pokemon vending glossy Japanese", name:"Growlithe", set:"Japanese Vending S3 (glossy)", image:"", median_gbp:25, cheapest_gbp:23, listings:4, deal_count:0, best_discount_pct:0, komiya:true, note:"JP vending only", target_gbp:null, cost:cost(23,5,"JP"), auction:{count:1,median_gbp:18,cheapest_gbp:23,url:"https://www.ebay.co.uk/",bids:3,ends:""}, bin:{count:3,median_gbp:28,cheapest_gbp:24,url:"https://www.ebay.co.uk/",bids:0,ends:""}, history:hist(22,25)},
+ {query:"Exeggcute Roaring Skies 1/108", name:"Exeggcute", set:"XY Roaring Skies 1/108", image:IMG+"ros/1.png", median_gbp:4, cheapest_gbp:3, listings:20, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(3,2,"US"), auction:{count:6,median_gbp:3,cheapest_gbp:3,url:"https://www.ebay.co.uk/",bids:3,ends:""}, bin:{count:14,median_gbp:4,cheapest_gbp:3,url:"https://www.ebay.co.uk/",bids:0,ends:""}, history:hist(4,4)},
 ]};
 
 let DATA=SAMPLE, dealsOnly=false, sortMode="deal", TARGETS={};
@@ -250,7 +263,7 @@ function render(){
 
     const tags=[];
     if(c.komiya) tags.push(`<span class="tag komiya">Komiya</span>`);
-    if(c.note)   tags.push(`<span class="tag warn">${c.note}</span>`);
+    if(c.note && c.note!==setLine(c)) tags.push(`<span class="tag warn">${c.note}</span>`);
     tags.push(`<span class="tag">${c.listings||0} live</span>`);
 
     const badge = deal ? `<span class="badge">deal −${c.best_discount_pct}%</span>`
@@ -268,6 +281,16 @@ function render(){
            View ${deal?"deal":"cheapest"} on eBay ↗</a>`
       : `<a class="go" href="${searchUrl}" target="_blank" rel="noopener">Search on eBay ↗</a>`;
 
+    const money = (o,label,cls) => o
+      ? `<div class="mkt ${cls}"><span class="mlbl">${label}</span>
+           <span class="mval">£${o.median_gbp}</span>
+           <span class="mlow">low £${o.cheapest_gbp} · ${o.count}</span></div>`
+      : `<div class="mkt none"><span class="mlbl">${label}</span>
+           <span class="mval">—</span><span class="mlow">none live</span></div>`;
+    const markets = `<div class="mkts">
+        ${money(c.bin,"Buy It Now","bin")}
+        ${money(c.auction,"Auction","auc")}
+      </div>`;
     const ct=c.cost;
     const costLine = ct ? `<div class="cost">
         <span class="ck">card</span> £${ct.card_gbp}
@@ -282,10 +305,11 @@ function render(){
       ${thumb}
       <div><div class="name">${prettyName(c)}</div>
         <div class="tags"><span class="tag">${setLine(c)}</span>${tags.join("")}</div>
+        ${markets}
         ${costLine}</div>
       <div class="price">
         <span class="val">£${c.median_gbp}</span>
-        <span class="lbl">median · low £${c.cheapest_gbp}${underTgt?` · <span class="under">≤ target</span>`:""}</span>
+        <span class="lbl">all · low £${c.cheapest_gbp}${underTgt?` · <span class="under">≤ target</span>`:""}</span>
         ${badge}
         ${link}
         <div class="tgt">target £<input type="number" min="0" step="1" value="${tval}"
@@ -311,9 +335,10 @@ function refreshChrome(){
   if(DATA.sample){ b.hidden=false; b.textContent="Showing sample figures with reference card art. Load your dashboard.json (top-right) for live prices, real listing photos, and deals."; }
   else b.hidden=true;
   $("#foot").innerHTML=
-    `Median, low, target and deals are all the <b>card price only</b> (raw/ungraded). A “deal” is a card at or below your target, or ≥25% under the median if no target is set.<br>`+
-    `The cost line breaks out the cheapest listing's <b>card + shipping + import tax</b> separately, with UK and SG totals for reference. UK import VAT (20%) only applies above £135, so most of these show £0; Singapore adds ~9% GST. Estimates, not tax advice.<br>`+
-    `Set targets here, hit “Save targets”, and drop targets.json next to the scanner. Thumbnails use live listing photos, falling back to reference card art (vending cards have none, so they show a placeholder). Trend builds from your own daily medians over the first week.`;
+    `<b>Buy It Now</b> is a firm price you can act on. <b>Auction</b> is the current bid on live auctions — it will usually rise before the auction ends, so treat it as a floor, not a price.<br>`+
+    `Deals are judged against the Buy-It-Now median (or your target if set), since a half-finished auction understates what the card is worth. All figures are the <b>card price only</b>, raw/ungraded.<br>`+
+    `The cost line breaks out the cheapest listing's <b>card + shipping + import tax</b>, with UK and SG totals. UK import VAT (20%) applies above £135; Singapore adds ~9% GST. Estimates, not tax advice.<br>`+
+    `Set targets here, hit “Save targets”, and drop targets.json next to the scanner. Trend builds from your own daily medians over the first week.`;
 }
 
 function apply(json){
