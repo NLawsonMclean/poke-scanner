@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deal Watch — Komiya card tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0F1A; --panel:#111829; --panel-2:#0E1422; --line:rgba(255,255,255,.08);
+    --ink:#E8ECF6; --muted:#8A93A8; --dim:#5C6478;
+    --green:#46E39B; --gold:#F2C14E;
+    --foil-1:#5EE7FF; --foil-2:#B592FF; --foil-3:#FFD36E;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Inter",system-ui,sans-serif; line-height:1.5; -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1000px; margin:0 auto; padding:32px 20px 80px}
+
+  header{margin-bottom:20px}
+  .eyebrow{font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--dim); margin-bottom:10px}
+  h1{font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:clamp(34px,7vw,56px);
+    letter-spacing:-.02em; margin:0; line-height:1;
+    background:linear-gradient(100deg,var(--foil-1),var(--foil-2),var(--foil-3),var(--foil-1));
+    background-size:250% 100%; -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; animation:foil 7s linear infinite}
+  @keyframes foil{to{background-position:250% 0}}
+  .sub{color:var(--muted); margin-top:12px; max-width:58ch; font-size:15px}
+
+  .bar{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:22px 0 8px}
+  .btn,.sel,.drop{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--ink);
+    background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:9px 13px;
+    cursor:pointer; transition:border-color .15s, background .15s}
+  .btn:hover,.sel:hover{border-color:rgba(255,255,255,.22)}
+  .btn[aria-pressed="true"]{border-color:var(--green); color:var(--green)}
+  .btn.save{border-color:rgba(242,193,78,.5); color:var(--gold)}
+  .sel{appearance:none; padding-right:28px;
+    background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);
+    background-position:calc(100% - 14px) 55%,calc(100% - 9px) 55%; background-size:5px 5px,5px 5px; background-repeat:no-repeat}
+  .drop{margin-left:auto; color:var(--muted); border-style:dashed}
+  .drop.hot{border-color:var(--foil-2); color:var(--ink)}
+  .meta{font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--dim); margin-top:6px}
+  .banner{font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--gold);
+    background:rgba(242,193,78,.08); border:1px solid rgba(242,193,78,.25);
+    border-radius:10px; padding:10px 13px; margin:14px 0 4px}
+
+  .list{margin-top:16px; display:flex; flex-direction:column; gap:10px}
+  .row{position:relative; display:grid; gap:16px; align-items:center;
+    grid-template-columns:56px 1fr auto 200px;
+    background:var(--panel); border:1px solid var(--line); border-radius:14px;
+    padding:14px 16px 14px 14px; overflow:hidden;
+    animation:rise .5s cubic-bezier(.2,.7,.2,1) backwards}
+  @keyframes rise{from{opacity:0; transform:translateY(8px)}}
+  .row.deal{border-color:rgba(90,231,255,.35)}
+  .row.deal::before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px;
+    background:linear-gradient(180deg,var(--foil-1),var(--foil-2),var(--foil-3),var(--foil-1));
+    background-size:100% 250%; animation:foilv 5s linear infinite}
+  @keyframes foilv{to{background-position:0 250%}}
+
+  .thumb{width:56px; height:78px; border-radius:8px; object-fit:cover;
+    background:var(--panel-2); border:1px solid var(--line)}
+  .ph{width:56px; height:78px; border-radius:8px; border:1px solid var(--line);
+    display:grid; place-items:center; font-family:"Space Grotesk",sans-serif; font-weight:700;
+    color:#2b3654; font-size:22px;
+    background:repeating-linear-gradient(135deg,rgba(94,231,255,.10) 0 6px,transparent 6px 12px),
+      linear-gradient(160deg,#182135,#0d1320)}
+
+  .name{font-family:"Space Grotesk",sans-serif; font-weight:500; font-size:16px; letter-spacing:-.01em}
+  .tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:5px}
+  .tag{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.04em;
+    color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:2px 8px}
+  .tag.komiya{color:var(--foil-2); border-color:rgba(181,146,255,.4)}
+  .tag.warn{color:var(--gold); border-color:rgba(242,193,78,.4)}
+
+  .price{text-align:right; font-family:"IBM Plex Mono",monospace}
+  .price .val{font-size:20px; font-weight:600}
+  .price .lbl{display:block; font-size:11px; color:var(--dim); margin-top:2px}
+  .badge{display:inline-block; margin-top:6px; font-family:"IBM Plex Mono",monospace;
+    font-size:11px; font-weight:600; color:var(--bg); background:var(--green);
+    border-radius:999px; padding:2px 8px}
+  .badge.none{background:transparent; color:var(--dim); font-weight:400}
+  .tgt{display:flex; align-items:center; justify-content:flex-end; gap:5px; margin-top:8px;
+    font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--muted)}
+  .tgt input{width:58px; text-align:right; font-family:"IBM Plex Mono",monospace; font-size:12px;
+    color:var(--ink); background:var(--panel-2); border:1px solid var(--line);
+    border-radius:7px; padding:3px 6px}
+  .tgt input:focus{outline:none; border-color:var(--gold)}
+  .under{color:var(--green)}
+
+  .cost{margin-top:8px; font-family:"IBM Plex Mono",monospace; font-size:11px;
+    color:var(--muted); line-height:1.65}
+  .cost .ck{color:var(--dim)}
+  .cost .plus,.cost .eq{color:var(--dim); margin:0 1px}
+  .cost .uk{color:#8FD0FF}
+  .cost .sg{color:#F0B7FF}
+  .cost b{font-weight:600}
+  .cost .src{color:var(--dim); margin-left:6px; font-style:normal}
+
+  .go{display:inline-block; margin-top:8px; font-family:"IBM Plex Mono",monospace;
+    font-size:11.5px; text-decoration:none; color:var(--foil-1);
+    border:1px solid rgba(94,231,255,.35); border-radius:8px; padding:4px 10px;
+    transition:background .15s, border-color .15s}
+  .go:hover{background:rgba(94,231,255,.10); border-color:var(--foil-1)}
+  .go.deal{color:var(--green); border-color:rgba(70,227,155,.45)}
+  .go.deal:hover{background:rgba(70,227,155,.10); border-color:var(--green)}
+  .go.none{color:var(--dim); border-color:var(--line); cursor:default}
+  .price .go{margin-top:8px}
+
+  .spark{width:200px; height:66px}
+  .spark text{font-family:"IBM Plex Mono",monospace}
+
+  a.row{text-decoration:none; color:inherit}
+  a.row:focus-visible{outline:2px solid var(--foil-1); outline-offset:2px}
+
+  footer{margin-top:34px; padding-top:18px; border-top:1px solid var(--line);
+    color:var(--dim); font-size:12.5px; font-family:"IBM Plex Mono",monospace; line-height:1.7}
+
+  @media(max-width:660px){
+    .row{grid-template-columns:48px 1fr; grid-template-areas:"t n" "t p" "s s"; row-gap:12px}
+    .thumb,.ph{grid-area:t; width:48px; height:67px}
+    .price{grid-area:p; text-align:left}
+    .tgt{justify-content:flex-start}
+    .spark{grid-area:s; width:100%}
+    .drop{margin-left:0}
+  }
+  @media(prefers-reduced-motion:reduce){ h1,.row.deal::before,.row{animation:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Komiya watchlist · eBay UK · US · JP/SG sellers · raw only</div>
+    <h1>Deal Watch</h1>
+    <p class="sub">Your watched cards, their going rate in pounds, and a live flag when
+      something lists well under the market. Set a target and the scanner alerts you the
+      moment a listing lands at or below it. Foil edge = a deal is on the table now.</p>
+
+    <div class="bar">
+      <button class="btn" id="dealsOnly" aria-pressed="false">Deals only</button>
+      <select class="sel" id="sort" aria-label="Sort cards">
+        <option value="deal">Sort: biggest deal</option>
+        <option value="value">Sort: highest value</option>
+        <option value="name">Sort: name</option>
+      </select>
+      <button class="btn save" id="saveTargets">Save targets ↓</button>
+      <label class="drop" id="drop" tabindex="0">Load your scan (dashboard.json)
+        <input type="file" id="file" accept="application/json,.json" hidden>
+      </label>
+    </div>
+    <div class="meta" id="meta">—</div>
+    <div class="banner" id="banner" hidden></div>
+  </header>
+
+  <div class="list" id="list"></div>
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const IMG="https://images.pokemontcg.io/";
+function recentDates(n){const out=[],d=new Date();
+  for(let i=n-1;i>=0;i--){const t=new Date(d); t.setDate(d.getDate()-i);
+    out.push(t.toISOString().slice(0,10));} return out;}
+function hist(a,b){const ds=recentDates(7);
+  return ds.map((date,i)=>{const t=i/6; const v=a+(b-a)*t+Math.sin(i*1.3)*1.2;
+    return {date, median_gbp:Math.max(1,Math.round(v*10)/10)};});}
+// mirrors the scanner's import-tax logic so sample totals are internally consistent
+function cost(cardv,ship,src){const base=cardv+ship;
+  const tuk=src==="GB"?0:(base>135?Math.round(base*0.2):0);
+  const tsg=src==="SG"?0:Math.round(base*0.09);
+  return {card_gbp:cardv,ship_gbp:ship,tax_uk_gbp:tuk,tax_sg_gbp:tsg,
+          total_uk_gbp:base+tuk,total_sg_gbp:base+tsg,source:src};}
+
+// Sample data renders instantly. Load your dashboard.json for live numbers.
+const SAMPLE={updated:"sample", dest:"UK", fx_note:"USD→GBP 0.743, JPY→GBP 0.0050", sample:true, cards:[
+ {query:"Slowpoke Neo Genesis 73 1st Edition", name:"Slowpoke", set:"Neo Genesis 73/111 · 1st Ed", image:IMG+"neo1/73.png", median_gbp:55, cheapest_gbp:51, listings:9, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:45, cost:cost(51,4,"US"), history:hist(46,55)},
+ {query:"Light Slowbro Neo Destiny 51 1st Edition", name:"Light Slowbro", set:"Neo Destiny 51/105 · 1st Ed", image:IMG+"neo4/51.png", median_gbp:40, cheapest_gbp:37, listings:6, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(37,3,"GB"), history:hist(35,40)},
+ {query:"Dark Omastar Neo Destiny 19 1st Edition", name:"Dark Omastar", set:"Neo Destiny 19/105 · 1st Ed", image:IMG+"neo4/19.png", median_gbp:22, cheapest_gbp:20, listings:14, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(20,3,"US"), history:hist(19,22)},
+ {query:"Dark Omanyte Neo Destiny 37 1st Edition", name:"Dark Omanyte", set:"Neo Destiny 37/105 · 1st Ed", image:IMG+"neo4/37.png", median_gbp:18, cheapest_gbp:16, listings:12, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(16,3,"US"), history:hist(15,18)},
+ {query:"Light Machamp Neo Destiny 25 1st Edition", name:"Light Machamp", set:"Neo Destiny 25/105 · 1st Ed", image:IMG+"neo4/25.png", median_gbp:30, cheapest_gbp:28, listings:8, deal_count:0, best_discount_pct:0, komiya:false, note:"illus. Miki Tanaka", target_gbp:null, cost:cost(28,3,"GB"), history:hist(31,30)},
+ {query:"Snorlax Pokemon vending glossy Japanese", name:"Snorlax", set:"Japanese Vending series", image:"", median_gbp:45, cheapest_gbp:41, listings:5, deal_count:0, best_discount_pct:0, komiya:false, note:"", target_gbp:null, cost:cost(41,6,"JP"), history:hist(38,45)},
+ {query:"Gulpin Generations Radiant Collection RC12", name:"Gulpin", set:"Generations RC12 · fork-balancing", image:IMG+"g1/RC12.png", median_gbp:12, cheapest_gbp:8, listings:11, deal_count:1, best_discount_pct:32, best_url:"https://www.ebay.co.uk/sch/i.html?_nkw=Gulpin+RC12", komiya:true, note:"", target_gbp:10, cost:cost(8,3,"US"), history:hist(10,12)},
+ {query:"Pokemon March Neo Genesis 102 Trainer 1st Edition", name:"Pokémon March", set:"Neo Genesis 102/111 · 1st Ed · Trainer", image:IMG+"neo1/102.png", median_gbp:16, cheapest_gbp:15, listings:7, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(15,3,"GB"), history:hist(14,16)},
+ {query:"Delibird Neo Revelation 5/64 Holo 1st Edition", name:"Delibird", set:"Neo Revelation 5/64 · Holo · 1st Ed", image:IMG+"neo3/5.png", median_gbp:35, cheapest_gbp:25, listings:10, deal_count:1, best_discount_pct:27, best_url:"https://www.ebay.co.uk/sch/i.html?_nkw=Delibird+Neo+Revelation+holo", komiya:true, note:"", target_gbp:30, cost:cost(25,4,"US"), history:hist(30,35)},
+ {query:"Growlithe Pokemon vending glossy Japanese", name:"Growlithe", set:"Japanese Vending S3 (glossy)", image:"", median_gbp:25, cheapest_gbp:23, listings:4, deal_count:0, best_discount_pct:0, komiya:true, note:"JP vending only", target_gbp:null, cost:cost(23,5,"JP"), history:hist(22,25)},
+ {query:"Exeggcute Roaring Skies 1/108", name:"Exeggcute", set:"XY Roaring Skies 1/108", image:IMG+"ros/1.png", median_gbp:4, cheapest_gbp:3, listings:20, deal_count:0, best_discount_pct:0, komiya:true, note:"", target_gbp:null, cost:cost(3,2,"US"), history:hist(4,4)},
+]};
+
+let DATA=SAMPLE, dealsOnly=false, sortMode="deal", TARGETS={};
+const $=s=>document.querySelector(s);
+const keyOf=c=>c.query||((c.name||"")+" "+(c.set||""));
+function prettyName(c){return c.name||(c.query||"").replace(/1st Edition/i,"").trim();}
+function setLine(c){return c.set||c.note||(c.query||"");}
+function fmtDate(s){const m=/^\d{4}-(\d{2})-(\d{2})$/.exec(s||""); return m?m[2]+"/"+m[1]:(s||"");}
+
+function sparkline(hist){
+  const W=200,H=66, L=30,R=6,T=8,B=16;                  // gutters for axes
+  if(!hist||hist.length<2){
+    return `<svg class="spark" viewBox="0 0 ${W} ${H}">
+      <line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="var(--line)"/>
+      <line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="var(--line)"/>
+      <text x="${L+6}" y="${(H)/2}" font-size="9" fill="var(--dim)">trend builds over runs</text></svg>`;
+  }
+  const ys=hist.map(p=>p.median_gbp);
+  const min=Math.min(...ys), max=Math.max(...ys), span=(max-min)||1;
+  const pw=W-L-R, ph=(H-B)-T, step=pw/(hist.length-1);
+  const pts=ys.map((y,i)=>[L+i*step, T+(1-(y-min)/span)*ph]);
+  const line=pts.map((p,i)=>(i?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1)).join(" ");
+  const area=`M${L} ${H-B} `+pts.map(p=>"L"+p[0].toFixed(1)+" "+p[1].toFixed(1)).join(" ")+` L${W-R} ${H-B} Z`;
+  const up=ys[ys.length-1]>=ys[0], col=up?"var(--gold)":"var(--green)";
+  const last=pts[pts.length-1];
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}" role="img" aria-label="price trend">
+    <line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="var(--line)"/>
+    <line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="var(--line)"/>
+    <text x="${L-4}" y="${T+3}"   font-size="8.5" fill="var(--dim)" text-anchor="end">£${Math.round(max)}</text>
+    <text x="${L-4}" y="${H-B}"   font-size="8.5" fill="var(--dim)" text-anchor="end">£${Math.round(min)}</text>
+    <path d="${area}" fill="${col}" opacity=".08"/>
+    <path d="${line}" fill="none" stroke="${col}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="2.6" fill="${col}"/>
+    <text x="${L}"   y="${H-4}" font-size="8" fill="var(--dim)" text-anchor="start">${fmtDate(hist[0].date)}</text>
+    <text x="${W-R}" y="${H-4}" font-size="8" fill="var(--dim)" text-anchor="end">${fmtDate(hist[hist.length-1].date)}</text>
+  </svg>`;
+}
+
+function render(){
+  const list=$("#list"); list.innerHTML="";
+  let cards=[...(DATA.cards||[])];
+  if(dealsOnly) cards=cards.filter(c=>c.deal_count>0);
+  cards.sort((a,b)=>{
+    if(sortMode==="value") return b.median_gbp-a.median_gbp;
+    if(sortMode==="name")  return prettyName(a).localeCompare(prettyName(b));
+    return (b.best_discount_pct-a.best_discount_pct)||(b.median_gbp-a.median_gbp);
+  });
+  if(!cards.length){ list.innerHTML=`<div class="meta">No cards match. Turn off “Deals only”, or run a scan.</div>`; return; }
+
+  cards.forEach((c,i)=>{
+    const deal=c.deal_count>0;
+    const el=document.createElement("div");
+    el.className="row"+(deal?" deal":"");
+    el.style.animationDelay=(i*35)+"ms";
+
+    const src=c.image || c.ref_image || "";
+    const initial=(prettyName(c)[0]||"?");
+    const thumb = src
+      ? `<img class="thumb" src="${src}" alt="${prettyName(c)}" referrerpolicy="no-referrer"
+            onerror="this.outerHTML='<div class=\\'ph\\'>${initial}</div>'">`
+      : `<div class="ph" aria-hidden="true">${initial}</div>`;
+
+    const tags=[];
+    if(c.komiya) tags.push(`<span class="tag komiya">Komiya</span>`);
+    if(c.note)   tags.push(`<span class="tag warn">${c.note}</span>`);
+    tags.push(`<span class="tag">${c.listings||0} live</span>`);
+
+    const badge = deal ? `<span class="badge">deal −${c.best_discount_pct}%</span>`
+                       : `<span class="badge none">at market</span>`;
+    const k=keyOf(c);
+    const tval = (TARGETS[k]!==undefined && TARGETS[k]!=="") ? TARGETS[k] : (c.target_gbp??"");
+    const underTgt = tval!=="" && c.cheapest_gbp<=Number(tval);
+
+    // click straight through: the best specific listing (deal if any, else
+    // cheapest); if no specific URL was captured, fall back to an eBay search.
+    const searchUrl = "https://www.ebay.co.uk/sch/i.html?_nkw=" +
+                      encodeURIComponent(c.query || (prettyName(c)+" "+(c.set||"")));
+    const link = c.best_url
+      ? `<a class="go${deal?" deal":""}" href="${c.best_url}" target="_blank" rel="noopener">
+           View ${deal?"deal":"cheapest"} on eBay ↗</a>`
+      : `<a class="go" href="${searchUrl}" target="_blank" rel="noopener">Search on eBay ↗</a>`;
+
+    const ct=c.cost;
+    const costLine = ct ? `<div class="cost">
+        <span class="ck">card</span> £${ct.card_gbp}
+        <span class="plus">+</span> <span class="ck">ship</span> £${ct.ship_gbp}
+        <span class="plus">+</span> <span class="ck">import tax</span>
+          <span class="uk">UK £${ct.tax_uk_gbp}</span> / <span class="sg">SG £${ct.tax_sg_gbp}</span>
+        <span class="eq">= total</span>
+          <b class="uk">£${ct.total_uk_gbp} UK</b> / <b class="sg">£${ct.total_sg_gbp} SG</b>
+        <span class="src">cheapest, from ${ct.source}</span></div>` : "";
+
+    el.innerHTML=`
+      ${thumb}
+      <div><div class="name">${prettyName(c)}</div>
+        <div class="tags"><span class="tag">${setLine(c)}</span>${tags.join("")}</div>
+        ${costLine}</div>
+      <div class="price">
+        <span class="val">£${c.median_gbp}</span>
+        <span class="lbl">median · low £${c.cheapest_gbp}${underTgt?` · <span class="under">≤ target</span>`:""}</span>
+        ${badge}
+        ${link}
+        <div class="tgt">target £<input type="number" min="0" step="1" value="${tval}"
+              data-key="${k.replace(/"/g,'&quot;')}" aria-label="target price for ${prettyName(c)}"></div>
+      </div>
+      ${sparkline(c.history)}`;
+    list.appendChild(el);
+  });
+
+  // wire target inputs
+  document.querySelectorAll('.tgt input').forEach(inp=>{
+    inp.addEventListener('change',e=>{
+      const k=e.target.dataset.key, v=e.target.value;
+      if(v==="") delete TARGETS[k]; else TARGETS[k]=Number(v);
+      render();
+    });
+  });
+}
+
+function refreshChrome(){
+  $("#meta").textContent=`updated ${DATA.updated||"—"}  ·  ship-to ${DATA.dest||"UK"}  ·  ${DATA.fx_note||""}`;
+  const b=$("#banner");
+  if(DATA.sample){ b.hidden=false; b.textContent="Showing sample figures with reference card art. Load your dashboard.json (top-right) for live prices, real listing photos, and deals."; }
+  else b.hidden=true;
+  $("#foot").innerHTML=
+    `Median, low, target and deals are all the <b>card price only</b> (raw/ungraded). A “deal” is a card at or below your target, or ≥25% under the median if no target is set.<br>`+
+    `The cost line breaks out the cheapest listing's <b>card + shipping + import tax</b> separately, with UK and SG totals for reference. UK import VAT (20%) only applies above £135, so most of these show £0; Singapore adds ~9% GST. Estimates, not tax advice.<br>`+
+    `Set targets here, hit “Save targets”, and drop targets.json next to the scanner. Thumbnails use live listing photos, falling back to reference card art (vending cards have none, so they show a placeholder). Trend builds from your own daily medians over the first week.`;
+}
+
+function apply(json){
+  DATA=json; TARGETS={};
+  (json.cards||[]).forEach(c=>{ if(c.target_gbp!=null && c.target_gbp!=="") TARGETS[keyOf(c)]=Number(c.target_gbp); });
+  render(); refreshChrome();
+}
+function readFile(f){const r=new FileReader();
+  r.onload=()=>{ try{ apply(JSON.parse(r.result)); }catch(e){ alert("That file isn't valid dashboard.json"); } };
+  r.readAsText(f);}
+function download(name,obj){
+  const blob=new Blob([JSON.stringify(obj,null,2)],{type:"application/json"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=name;
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(a.href);
+}
+
+$("#saveTargets").addEventListener("click",()=>{
+  const clean={}; Object.entries(TARGETS).forEach(([k,v])=>{ if(v!==""&&v!=null) clean[k]=Number(v); });
+  if(!Object.keys(clean).length){ alert("Set a target on at least one card first."); return; }
+  download("targets.json",clean);
+});
+$("#file").addEventListener("change",e=>{ if(e.target.files[0]) readFile(e.target.files[0]); });
+const drop=$("#drop");
+drop.addEventListener("click",()=>$("#file").click());
+drop.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault();$("#file").click();} });
+["dragover","dragenter"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add("hot");}));
+["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove("hot");}));
+drop.addEventListener("drop",e=>{ if(e.dataTransfer.files[0]) readFile(e.dataTransfer.files[0]); });
+$("#dealsOnly").addEventListener("click",e=>{ dealsOnly=!dealsOnly; e.target.setAttribute("aria-pressed",dealsOnly); render(); });
+$("#sort").addEventListener("change",e=>{ sortMode=e.target.value; render(); });
+
+fetch("dashboard.json?t="+Date.now()).then(r=>r.ok?r.json():Promise.reject()).then(apply)
+  .catch(()=>{ apply(SAMPLE); });
+</script>
+</body>
+</html>
