@@ -1,0 +1,315 @@
+{
+  "updated": "2026-07-23",
+  "dest": "UK",
+  "fx_note": "USD->GBP 0.748, JPY->GBP 0.0046",
+  "cards": [
+    {
+      "query": "Slowpoke Neo Genesis 73 1st Edition",
+      "note": "Komiya, EN",
+      "median_gbp": 11,
+      "cheapest_gbp": 0,
+      "listings": 27,
+      "deal_count": 5,
+      "best_discount_pct": 100,
+      "best_url": "https://www.ebay.com/itm/298514919646?_skw=Slowpoke+Neo+Genesis+73+1st+Edition&hash=item4580e030de:g:s9QAAeSwPpdqW4aK",
+      "image": "https://i.ebayimg.com/images/g/s9QAAeSwPpdqW4aK/s-l225.jpg",
+      "ref_image": "https://images.pokemontcg.io/neo1/73.png",
+      "target_gbp": null,
+      "cost": {
+        "card_gbp": 0,
+        "ship_gbp": 0,
+        "tax_uk_gbp": 0,
+        "tax_sg_gbp": 0,
+        "total_uk_gbp": 0,
+        "total_sg_gbp": 0,
+        "source": "US"
+      },
+      "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 10.87
+        }
+      ]
+    },
+    {
+      "query": "Light Slowbro Neo Destiny 51 1st Edition",
+      "note": "Komiya, EN",
+      "median_gbp": 54,
+      "cheapest_gbp": 45,
+      "listings": 8,
+      "deal_count": 0,
+      "best_discount_pct": 0,
+      "best_url": "https://www.ebay.com/itm/227430144100?_skw=Light+Slowbro+Neo+Destiny+51+1st+Edition&hash=item34f3e49864:g:kcsAAeSwrptqVYhB",
+      "image": "https://i.ebayimg.com/images/g/kcsAAeSwrptqVYhB/s-l225.jpg",
+      "ref_image": "https://images.pokemontcg.io/neo4/51.png",
+      "target_gbp": null,
+      "cost": {
+        "card_gbp": 45,
+        "ship_gbp": 0,
+        "tax_uk_gbp": 0,
+        "tax_sg_gbp": 4,
+        "total_uk_gbp": 45,
+        "total_sg_gbp": 49,
+        "source": "US"
+      },
+      "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 54.21
+        }
+      ]
+    },
+    {
+      "query": "Dark Omastar Neo Destiny 19 1st Edition",
+      "note": "Komiya, EN",
+      "median_gbp": 26,
+      "cheapest_gbp": 16,
+      "listings": 3,
+      "deal_count": 1,
+      "best_discount_pct": 40,
+      "best_url": "https://www.ebay.com/itm/407064395110?_skw=Dark+Omastar+Neo+Destiny+19+1st+Edition&hash=item5ec6edbd66:g:yOoAAeSwf4JqUZH4",
+      "image": "https://i.ebayimg.com/images/g/yOoAAeSwf4JqUZH4/s-l225.jpg",
+      "ref_image": "https://images.pokemontcg.io/neo4/19.png",
+      "target_gbp": null,
+      "cost": {
+        "card_gbp": 16,
+        "ship_gbp": 0,
+        "tax_uk_gbp": 0,
+        "tax_sg_gbp": 1,
+        "total_uk_gbp": 16,
+        "total_sg_gbp": 17,
+        "source": "US"
+      },
+      "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 26.17
+        }
+      ]
+    },
+    {
+      "query": "Dark Omanyte Neo Destiny 37 1st Edition",
+      "note": "Komiya, EN",
+      "median_gbp": 10,
+      "cheapest_gbp": 5,
+      "listings": 4,
+      "deal_count": 1,
+      "best_discount_pct": 48,
+      "best_url": "https://www.ebay.com/itm/157594182067?_skw=Dark+Omanyte+Neo+Destiny+37+1st+Edition&hash=item24b15861b3:g:uYMAAeSwIPJpXFLF",
+      "image": "https://i.ebayimg.com/images/g/uYMAAeSwIPJpXFLF/s-l225.jpg",
+      "ref_image": "https://images.pokemontcg.io/neo4/37.png",
+      "target_gbp": null,
+      "cost": {
+        "card_gbp": 5,
+        "ship_gbp": 0,
+        "tax_uk_gbp": 0,
+        "tax_sg_gbp": 0,
+        "total_uk_gbp": 5,
+        "total_sg_gbp": 6,
+        "source": "US"
+      },
+      "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 10.09
+        }
+      ]
+    },
+    {
+      "query": "Light Machamp Neo Destiny 25 1st Edition",
+      "note": "illus. Miki Tanaka",
+      "median_gbp": 37,
+      "cheapest_gbp": 30,
+      "listings": 4,
+      "deal_count": 0,
+      "best_discount_pct": 0,
+      "best_url": "https://www.ebay.co.uk/itm/318514801522?_skw=Light+Machamp+Neo+Destiny+25+1st+Edition&hash=item4a28f62b72:g:wv8AAeSw7UBqQPG1",
+      "image": "https://i.ebayimg.com/images/g/wv8AAeSw7UBqQPG1/s-l225.jpg",
+      "ref_image": "https://images.pokemontcg.io/neo4/25.png",
+      "target_gbp": null,
+      "cost": {
+        "card_gbp": 30,
+        "ship_gbp": 3,
+        "tax_uk_gbp": 0,
+        "tax_sg_gbp": 3,
+        "total_uk_gbp": 33,
+        "total_sg_gbp": 36,
+        "source": "GB"
+      },
+      "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 36.81
+        }
+      ]
+    },
+    {
+      "query": "Snorlax Pokemon vending glossy Japanese",
+      "note": "JP vending series",
+      "median_gbp": 274,
+      "cheapest_gbp": 240,
+      "listings": 32,
+      "deal_count": 0,
+      "best_discount_pct": 0,
+      "best_url": "https://www.ebay.co.uk/itm/336676030420?_skw=Snorlax+Pokemon+vending+glossy+Japanese&hash=item4e637487d4:g:eqcAAeSw1vZqVuAp",
+      "image": "https://i.ebayimg.com/images/g/eqcAAeSw1vZqVuAp/s-l225.jpg",
+      "ref_image": "",
+      "target_gbp": null,
+      "cost": {
+        "card_gbp": 240,
+        "ship_gbp": 0,
+        "tax_uk_gbp": 48,
+        "tax_sg_gbp": 22,
+        "total_uk_gbp": 288,
+        "total_sg_gbp": 262,
+        "source": "JP"
+      },
+      "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 273.5
+        }
+      ]
+    },
+    {
+      "query": "Gulpin Generations Radiant Collection RC12",
+      "note": "Komiya, fork-balancing, EN",
+      "median_gbp": 7,
+      "cheapest_gbp": 0,
+      "listings": 56,
+      "deal_count": 3,
+      "best_discount_pct": 100,
+      "best_url": "https://www.ebay.com/itm/336697164503?_skw=Gulpin+Generations+Radiant+Collection+RC12&hash=item4e64b702d7:g:qfAAAeSws11qCSo9",
+      "image": "https://i.ebayimg.com/images/g/qfAAAeSws11qCSo9/s-l225.jpg",
+      "ref_image": "https://images.pokemontcg.io/g1/RC12.png",
+      "target_gbp": null,
+      "cost": {
+        "card_gbp": 0,
+        "ship_gbp": 0,
+        "tax_uk_gbp": 0,
+        "tax_sg_gbp": 0,
+        "total_uk_gbp": 0,
+        "total_sg_gbp": 0,
+        "source": "US"
+      },
+      "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 7.47
+        }
+      ]
+    },
+    {
+      "query": "Pokemon March Neo Genesis 102 Trainer 1st Edition",
+      "note": "Trainer card, Komiya",
+      "median_gbp": 5,
+      "cheapest_gbp": 0,
+      "listings": 51,
+      "deal_count": 10,
+      "best_discount_pct": 100,
+      "best_url": "https://www.ebay.co.uk/itm/137534045804?_skw=Pokemon+March+Neo+Genesis+102+Trainer+1st+Edition&hash=item2005aafe6c:g:1FUAAeSwDQtqHfiw",
+      "image": "https://i.ebayimg.com/images/g/1FUAAeSwDQtqHfiw/s-l225.jpg",
+      "ref_image": "https://images.pokemontcg.io/neo1/102.png",
+      "target_gbp": null,
+      "cost": {
+        "card_gbp": 0,
+        "ship_gbp": 2,
+        "tax_uk_gbp": 0,
+        "tax_sg_gbp": 0,
+        "total_uk_gbp": 2,
+        "total_sg_gbp": 2,
+        "source": "GB"
+      },
+      "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 4.99
+        }
+      ]
+    },
+    {
+      "query": "Delibird Neo Revelation 5/64 Holo 1st Edition",
+      "note": "Komiya, EN holo",
+      "median_gbp": 94,
+      "cheapest_gbp": 90,
+      "listings": 5,
+      "deal_count": 0,
+      "best_discount_pct": 0,
+      "best_url": "https://www.ebay.com/itm/298498891185?_skw=Delibird+Neo+Revelation+5%2F64+Holo+1st+Edition&hash=item457feb9db1:g:qrEAAeSwsJZqN~H2",
+      "image": "https://i.ebayimg.com/images/g/qrEAAeSwsJZqN~H2/s-l225.jpg",
+      "ref_image": "https://images.pokemontcg.io/neo3/5.png",
+      "target_gbp": null,
+      "cost": {
+        "card_gbp": 90,
+        "ship_gbp": 0,
+        "tax_uk_gbp": 0,
+        "tax_sg_gbp": 8,
+        "total_uk_gbp": 90,
+        "total_sg_gbp": 98,
+        "source": "US"
+      },
+      "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 94.17
+        }
+      ]
+    },
+    {
+      "query": "Growlithe Pokemon vending glossy Japanese",
+      "note": "JP Vending S3 only - no EN / no 1st Ed",
+      "median_gbp": 71,
+      "cheapest_gbp": 0,
+      "listings": 45,
+      "deal_count": 2,
+      "best_discount_pct": 100,
+      "best_url": "https://www.ebay.com/itm/800365537098?_skw=Growlithe+Pokemon+vending+glossy+Japanese&hash=itemba5980e74a:g:6QIAAeSwusNqW4tQ",
+      "image": "https://i.ebayimg.com/images/g/6QIAAeSwusNqW4tQ/s-l225.jpg",
+      "ref_image": "",
+      "target_gbp": null,
+      "cost": {
+        "card_gbp": 0,
+        "ship_gbp": 10,
+        "tax_uk_gbp": 0,
+        "tax_sg_gbp": 1,
+        "total_uk_gbp": 10,
+        "total_sg_gbp": 11,
+        "source": "JP"
+      },
+      "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 71.03
+        }
+      ]
+    },
+    {
+      "query": "Exeggcute Roaring Skies 1/108",
+      "note": "Komiya, EN, no 1st Ed",
+      "median_gbp": 1,
+      "cheapest_gbp": 1,
+      "listings": 75,
+      "deal_count": 4,
+      "best_discount_pct": 50,
+      "best_url": "https://www.ebay.com/itm/327186579965?_skw=Exeggcute+Roaring+Skies+1%2F108&hash=item4c2dd701fd:g:E0QAAeSwP5RqG0d~",
+      "image": "https://i.ebayimg.com/images/g/E0QAAeSwP5RqG0d~/s-l225.jpg",
+      "ref_image": "https://images.pokemontcg.io/ros/1.png",
+      "target_gbp": null,
+      "cost": {
+        "card_gbp": 1,
+        "ship_gbp": 0,
+        "tax_uk_gbp": 0,
+        "tax_sg_gbp": 0,
+        "total_uk_gbp": 1,
+        "total_sg_gbp": 1,
+        "source": "US"
+      },
+      "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 1.5
+        }
+      ]
+    }
+  ]
+}
