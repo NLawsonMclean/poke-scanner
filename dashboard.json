@@ -51,6 +51,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 11.04
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 11.04
         }
       ]
     },
@@ -87,6 +91,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 4.99
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 4.99
@@ -149,6 +157,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 94.17
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 94.17
         }
       ]
     },
@@ -196,6 +208,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 8.37
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 8.37
         }
       ]
     },
@@ -232,6 +248,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 54.21
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 54.21
@@ -298,6 +318,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 26.17
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 26.17
         }
       ]
     },
@@ -334,6 +358,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 10.09
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 10.09
@@ -396,6 +424,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 7.0
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 7.0
         }
       ]
     },
@@ -447,6 +479,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 36.81
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 36.81
         }
       ]
     },
@@ -469,14 +505,14 @@
         "count": 36,
         "median_gbp": 12,
         "cheapest_gbp": 4,
-        "url": "https://www.ebay.com/itm/373093575208?_skw=Smeargle+Black+Star+Promo+32&hash=item56de1c2a28:g:EkQAAeSwdJpqVIkN&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZgAFR%2Fm8beikm%2FtY6U%2BcOuljsNWgj00mPGVBXSk3VVxV%2F5oiW1t%2BIXlW0iEsQRLrQg670IGw0mkTPLxb%2F%2BTI3gRs61ZkxUYX0FSoepASoJ013o2KtXX3081A4%2FFkssIYIS2RwQPKU3xmMUfS%2FK6mXgfI9WHG2WtLAdc0U6MT8gRLIGN3ACxt7vcE6KeLev4424iKT0VFIp5QbKZkoCPz%2Fahrf5IPaUB8TWyaiJ%2F5pGHnnlpB44%2FxN2jwQA4g7INEPTs5RKjYB6dammvgzbBrZRYmzEEw%2FF0LpivVWOQo%2FNF04XzvNzEv8tPi5Ege7qzgc%3D",
+        "url": "https://www.ebay.com/itm/373093575208?_skw=Smeargle+Black+Star+Promo+32&hash=item56de1c2a28:g:EkQAAeSwdJpqVIkN&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZgAFR%2Fm8beikm%2FtY6U%2BcOuljsNWgj00mPGVBXSk3VVxV%2F5oiW1t%2BIXlW0iEsQRLrQg670IGw0mkTPLxb%2F%2BTI3gRs61ZkxUYX0FSoepASoJ013o2KtXX3081A4%2FFkssIYJPgJVPMv%2BG%2F6%2Bp48AshUGtcUwagipSdJAzRox%2FV9oNihpoARQTZ22S%2BEZI2Ek2LPmVY6UjJaH4j6SyCSzxPLewbkwK546BILZZ3iGkoYJWPtzV%2FEnzoamvitwVUsMg3TggHs159oUHpa5kUMwKXaUAI5cWfU68eFqepqeqnU%2F183WnJfSiR%2FOx%2Fs%2F5cU29Cvo%3D",
         "bids": 0,
         "ends": ""
       },
       "listings": 37,
       "deal_count": 9,
       "best_discount_pct": 63,
-      "best_url": "https://www.ebay.com/itm/373093575208?_skw=Smeargle+Black+Star+Promo+32&hash=item56de1c2a28:g:EkQAAeSwdJpqVIkN&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZgAFR%2Fm8beikm%2FtY6U%2BcOuljsNWgj00mPGVBXSk3VVxV%2F5oiW1t%2BIXlW0iEsQRLrQg670IGw0mkTPLxb%2F%2BTI3gRs61ZkxUYX0FSoepASoJ013o2KtXX3081A4%2FFkssIYIS2RwQPKU3xmMUfS%2FK6mXgfI9WHG2WtLAdc0U6MT8gRLIGN3ACxt7vcE6KeLev4424iKT0VFIp5QbKZkoCPz%2Fahrf5IPaUB8TWyaiJ%2F5pGHnnlpB44%2FxN2jwQA4g7INEPTs5RKjYB6dammvgzbBrZRYmzEEw%2FF0LpivVWOQo%2FNF04XzvNzEv8tPi5Ege7qzgc%3D",
+      "best_url": "https://www.ebay.com/itm/373093575208?_skw=Smeargle+Black+Star+Promo+32&hash=item56de1c2a28:g:EkQAAeSwdJpqVIkN&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZgAFR%2Fm8beikm%2FtY6U%2BcOuljsNWgj00mPGVBXSk3VVxV%2F5oiW1t%2BIXlW0iEsQRLrQg670IGw0mkTPLxb%2F%2BTI3gRs61ZkxUYX0FSoepASoJ013o2KtXX3081A4%2FFkssIYJPgJVPMv%2BG%2F6%2Bp48AshUGtcUwagipSdJAzRox%2FV9oNihpoARQTZ22S%2BEZI2Ek2LPmVY6UjJaH4j6SyCSzxPLewbkwK546BILZZ3iGkoYJWPtzV%2FEnzoamvitwVUsMg3TggHs159oUHpa5kUMwKXaUAI5cWfU68eFqepqeqnU%2F183WnJfSiR%2FOx%2Fs%2F5cU29Cvo%3D",
       "image": "https://i.ebayimg.com/images/g/EkQAAeSwdJpqVIkN/s-l225.jpg",
       "ref_image": "https://images.pokemontcg.io/basep/32.png",
       "target_gbp": null,
@@ -497,6 +533,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 11.98
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 11.96
         },
         {
           "date": "2026-07-23",
@@ -537,6 +577,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 59.82
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 59.82
@@ -595,6 +639,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 44.3
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 44.3
         }
       ]
     },
@@ -642,53 +690,95 @@
         {
           "date": "2026-07-23",
           "median_gbp": 132.72
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 132.72
         }
       ]
     },
     {
-      "query": "Tyrogue Aquapolis 63 reverse holo",
-      "name": "Tyrogue",
-      "set": "Aquapolis 63/147 \u00b7 Rev Holo",
-      "note": "Komiya",
-      "median_gbp": 56,
-      "cheapest_gbp": 55,
-      "auction": null,
+      "query": "Tyrogue Japanese Pokemon card",
+      "name": "Tyrogue (JP)",
+      "set": "JP e-Card era \u00b7 set TBC",
+      "note": "JP - confirm set/number",
+      "median_gbp": 5,
+      "cheapest_gbp": 1,
+      "auction": {
+        "count": 1,
+        "median_gbp": 3,
+        "cheapest_gbp": 3,
+        "url": "https://www.ebay.com/itm/127987671645?_skw=Tyrogue+Japanese+Pokemon+card&hash=item1dcca8e25d:g:duoAAeSwe6hpY~62",
+        "bids": 0,
+        "ends": "2026-07-29T00:49:35.000Z"
+      },
       "bin": {
-        "count": 2,
-        "median_gbp": 56,
-        "cheapest_gbp": 55,
-        "url": "https://www.ebay.com/itm/277997138990?_skw=Tyrogue+Aquapolis+63+reverse+holo&hash=item40b9ebb42e:g:BVMAAeSwDgxqCik1",
+        "count": 115,
+        "median_gbp": 5,
+        "cheapest_gbp": 1,
+        "url": "https://www.ebay.com/itm/406927361538?_skw=Tyrogue+Japanese+Pokemon+card&hash=item5ebec2c602:g:s7MAAeSwnUZqBmHC",
         "bids": 0,
         "ends": ""
       },
-      "listings": 2,
-      "deal_count": 0,
-      "best_discount_pct": 0,
-      "best_url": "https://www.ebay.com/itm/277997138990?_skw=Tyrogue+Aquapolis+63+reverse+holo&hash=item40b9ebb42e:g:BVMAAeSwDgxqCik1",
-      "image": "https://i.ebayimg.com/images/g/BVMAAeSwDgxqCik1/s-l225.jpg",
-      "ref_image": "https://images.pokemontcg.io/ecard2/63.png",
+      "listings": 116,
+      "deal_count": 46,
+      "best_discount_pct": 82,
+      "best_url": "https://www.ebay.com/itm/406927361538?_skw=Tyrogue+Japanese+Pokemon+card&hash=item5ebec2c602:g:s7MAAeSwnUZqBmHC",
+      "image": "https://i.ebayimg.com/images/g/s7MAAeSwnUZqBmHC/s-l225.jpg",
+      "ref_image": "",
       "target_gbp": null,
       "cost": {
-        "card_gbp": 55,
+        "card_gbp": 1,
         "ship_gbp": 0,
         "tax_uk_gbp": 0,
-        "tax_sg_gbp": 5,
-        "total_uk_gbp": 55,
-        "total_sg_gbp": 60,
-        "source": "GB"
+        "tax_sg_gbp": 0,
+        "total_uk_gbp": 1,
+        "total_sg_gbp": 1,
+        "source": "JP"
       },
       "history": [
         {
           "date": "2026-07-23",
-          "median_gbp": 56.0
-        },
+          "median_gbp": 5.42
+        }
+      ]
+    },
+    {
+      "query": "Hitmontop Japanese Pokemon card",
+      "name": "Hitmontop (JP)",
+      "set": "JP e-Card era \u00b7 set TBC",
+      "note": "JP - confirm set/number",
+      "median_gbp": 11,
+      "cheapest_gbp": 1,
+      "auction": null,
+      "bin": {
+        "count": 121,
+        "median_gbp": 11,
+        "cheapest_gbp": 1,
+        "url": "https://www.ebay.com/itm/397407760474?_skw=Hitmontop+Japanese+Pokemon+card&hash=item5c8759305a:g:tgUAAeSwHk1qOlcO",
+        "bids": 0,
+        "ends": ""
+      },
+      "listings": 121,
+      "deal_count": 49,
+      "best_discount_pct": 92,
+      "best_url": "https://www.ebay.com/itm/397407760474?_skw=Hitmontop+Japanese+Pokemon+card&hash=item5c8759305a:g:tgUAAeSwHk1qOlcO",
+      "image": "https://i.ebayimg.com/images/g/tgUAAeSwHk1qOlcO/s-l225.jpg",
+      "ref_image": "",
+      "target_gbp": null,
+      "cost": {
+        "card_gbp": 1,
+        "ship_gbp": 0,
+        "tax_uk_gbp": 0,
+        "tax_sg_gbp": 0,
+        "total_uk_gbp": 1,
+        "total_sg_gbp": 1,
+        "source": "JP"
+      },
+      "history": [
         {
           "date": "2026-07-23",
-          "median_gbp": 56.0
-        },
-        {
-          "date": "2026-07-23",
-          "median_gbp": 56.0
+          "median_gbp": 11.21
         }
       ]
     },
@@ -725,6 +815,10 @@
         "source": "DE"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 157.86
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 157.86
@@ -783,6 +877,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 9.99
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 9.99
         }
       ]
     },
@@ -819,6 +917,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 33.64
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 33.64
@@ -877,6 +979,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 74.77
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 74.77
         }
       ]
     },
@@ -913,6 +1019,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 25.66
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 25.66
@@ -971,6 +1081,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 100.94
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 100.94
         }
       ]
     },
@@ -1007,6 +1121,10 @@
         "source": "GB"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 49.97
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 49.97
@@ -1065,6 +1183,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 67.29
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 67.29
         }
       ]
     },
@@ -1101,6 +1223,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 56.08
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 56.08
@@ -1159,6 +1285,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 36.19
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 36.19
         }
       ]
     },
@@ -1195,6 +1325,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 2.99
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 2.99
@@ -1257,6 +1391,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 7.48
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 7.48
         }
       ]
     },
@@ -1293,6 +1431,10 @@
         "source": "GB"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 18.69
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 18.69
@@ -1351,6 +1493,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 22.42
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 22.42
         }
       ]
     },
@@ -1387,6 +1533,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 1.91
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 1.91
@@ -1452,6 +1602,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 7.45
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 7.45
         }
       ]
     },
@@ -1495,6 +1649,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 2.98
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 2.88
         },
         {
           "date": "2026-07-23",
@@ -1546,6 +1704,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 8.31
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 8.31
         }
       ]
     },
@@ -1558,15 +1720,15 @@
       "cheapest_gbp": 1,
       "auction": null,
       "bin": {
-        "count": 54,
+        "count": 52,
         "median_gbp": 2,
         "cheapest_gbp": 1,
         "url": "https://www.ebay.com/itm/298524142721?_skw=Croconaw+Fusion+Strike+56+reverse+holo&hash=item45816cec81:g:NnUAAeSwYlpqYEPT",
         "bids": 0,
         "ends": ""
       },
-      "listings": 54,
-      "deal_count": 26,
+      "listings": 52,
+      "deal_count": 25,
       "best_discount_pct": 63,
       "best_url": "https://www.ebay.com/itm/298524142721?_skw=Croconaw+Fusion+Strike+56+reverse+holo&hash=item45816cec81:g:NnUAAeSwYlpqYEPT",
       "image": "https://i.ebayimg.com/images/g/NnUAAeSwYlpqYEPT/s-l225.jpg",
@@ -1585,6 +1747,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 1.68
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 1.61
         },
         {
           "date": "2026-07-23",
@@ -1640,6 +1806,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 1.49
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 1.49
         }
       ]
     },
@@ -1676,6 +1846,10 @@
         "source": "JP"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 273.5
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 273.5
@@ -1741,6 +1915,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 74.02
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 74.02
         }
       ]
     },
@@ -1777,6 +1955,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 23.99
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 23.99
@@ -1835,6 +2017,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 73.25
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 73.25
         }
       ]
     },
@@ -1871,6 +2057,10 @@
         "source": "GB"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 52.34
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 52.34
@@ -1929,6 +2119,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 61.82
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 61.82
         }
       ]
     },
@@ -1965,6 +2159,10 @@
         "source": "GB"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 78.5
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 78.5
@@ -2023,6 +2221,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 157.66
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 157.66
         }
       ]
     },
@@ -2070,6 +2272,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 3608.92
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 3608.92
         }
       ]
     },
@@ -2078,20 +2284,20 @@
       "name": "Bellsprout (JP)",
       "set": "JP EX era",
       "note": "JP - verify set",
-      "median_gbp": 5,
+      "median_gbp": 4,
       "cheapest_gbp": 1,
       "auction": null,
       "bin": {
-        "count": 120,
-        "median_gbp": 5,
+        "count": 119,
+        "median_gbp": 4,
         "cheapest_gbp": 1,
         "url": "https://www.ebay.com/itm/395807452796?_skw=Bellsprout+Japanese+Pokemon+card&hash=item5c27f66e7c:g:yZ4AAeSwQMdp-ZB0",
         "bids": 0,
         "ends": ""
       },
-      "listings": 120,
-      "deal_count": 53,
-      "best_discount_pct": 83,
+      "listings": 119,
+      "deal_count": 48,
+      "best_discount_pct": 78,
       "best_url": "https://www.ebay.com/itm/395807452796?_skw=Bellsprout+Japanese+Pokemon+card&hash=item5c27f66e7c:g:yZ4AAeSwQMdp-ZB0",
       "image": "https://i.ebayimg.com/images/g/yZ4AAeSwQMdp-ZB0/s-l225.jpg",
       "ref_image": "",
@@ -2117,60 +2323,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 4.78
-        }
-      ]
-    },
-    {
-      "query": "Tyrogue Japanese Pokemon card e-card",
-      "name": "Tyrogue (JP)",
-      "set": "JP e-Card era",
-      "note": "JP - verify set",
-      "median_gbp": 22,
-      "cheapest_gbp": 3,
-      "auction": {
-        "count": 1,
-        "median_gbp": 3,
-        "cheapest_gbp": 3,
-        "url": "https://www.ebay.com/itm/127987671645?_skw=Tyrogue+Japanese+Pokemon+card+e-card&hash=item1dcca8e25d:g:duoAAeSwe6hpY~62",
-        "bids": 0,
-        "ends": "2026-07-29T00:49:35.000Z"
-      },
-      "bin": {
-        "count": 8,
-        "median_gbp": 30,
-        "cheapest_gbp": 3,
-        "url": "https://www.ebay.com/itm/154369856425?_skw=Tyrogue+Japanese+Pokemon+card+e-card&hash=item23f12913a9:g:xDgAAOSwzA9gQwxr",
-        "bids": 0,
-        "ends": ""
-      },
-      "listings": 9,
-      "deal_count": 5,
-      "best_discount_pct": 91,
-      "best_url": "https://www.ebay.com/itm/127987671645?_skw=Tyrogue+Japanese+Pokemon+card+e-card&hash=item1dcca8e25d:g:duoAAeSwe6hpY~62",
-      "image": "https://i.ebayimg.com/images/g/duoAAeSwe6hpY~62/s-l225.jpg",
-      "ref_image": "",
-      "target_gbp": null,
-      "cost": {
-        "card_gbp": 3,
-        "ship_gbp": 1,
-        "tax_uk_gbp": 0,
-        "tax_sg_gbp": 0,
-        "total_uk_gbp": 4,
-        "total_sg_gbp": 4,
-        "source": "US"
-      },
-      "history": [
-        {
-          "date": "2026-07-23",
-          "median_gbp": 22.43
         },
         {
           "date": "2026-07-23",
-          "median_gbp": 22.43
-        },
-        {
-          "date": "2026-07-23",
-          "median_gbp": 22.43
+          "median_gbp": 4.49
         }
       ]
     }
