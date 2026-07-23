@@ -102,6 +102,12 @@
   .mkt.auc{border-color:rgba(242,193,78,.35)}
   .mkt.auc .mval{color:var(--gold)}
   .mkt.none .mval{color:var(--dim); font-weight:400}
+  a.mkt{text-decoration:none; color:inherit; display:block; transition:border-color .15s, background .15s}
+  a.mkt:hover{background:rgba(255,255,255,.03)}
+  a.mkt.bin:hover{border-color:var(--green)}
+  a.mkt.auc:hover{border-color:var(--gold)}
+  a.mkt:focus-visible{outline:2px solid var(--foil-1); outline-offset:2px}
+  .mkt .arr{opacity:.55}
 
   .cost{margin-top:8px; font-family:"IBM Plex Mono",monospace; font-size:11px;
     color:var(--muted); line-height:1.65}
@@ -254,7 +260,9 @@ function render(){
     el.className="row"+(deal?" deal":"");
     el.style.animationDelay=(i*35)+"ms";
 
-    const src=c.image || c.ref_image || "";
+    // Prefer the clean reference card art; fall back to the eBay listing photo
+    // only for cards with no database image (the Japanese vending/VS prints).
+    const src=c.ref_image || c.image || "";
     const initial=(prettyName(c)[0]||"?");
     const thumb = src
       ? `<img class="thumb" src="${src}" alt="${prettyName(c)}" referrerpolicy="no-referrer"
@@ -281,12 +289,17 @@ function render(){
            View ${deal?"deal":"cheapest"} on eBay ↗</a>`
       : `<a class="go" href="${searchUrl}" target="_blank" rel="noopener">Search on eBay ↗</a>`;
 
-    const money = (o,label,cls) => o
-      ? `<div class="mkt ${cls}"><span class="mlbl">${label}</span>
-           <span class="mval">£${o.median_gbp}</span>
-           <span class="mlow">low £${o.cheapest_gbp} · ${o.count}</span></div>`
-      : `<div class="mkt none"><span class="mlbl">${label}</span>
+    const money = (o,label,cls) => {
+      if(!o) return `<div class="mkt none"><span class="mlbl">${label}</span>
            <span class="mval">—</span><span class="mlow">none live</span></div>`;
+      const inner = `<span class="mlbl">${label}${o.url?` <span class="arr">↗</span>`:""}</span>
+           <span class="mval">£${o.median_gbp}</span>
+           <span class="mlow">low £${o.cheapest_gbp} · ${o.count} live</span>`;
+      return o.url
+        ? `<a class="mkt ${cls}" href="${o.url}" target="_blank" rel="noopener"
+             title="Cheapest ${label} listing on eBay">${inner}</a>`
+        : `<div class="mkt ${cls}">${inner}</div>`;
+    };
     const markets = `<div class="mkts">
         ${money(c.bin,"Buy It Now","bin")}
         ${money(c.auction,"Auction","auc")}

@@ -30,6 +30,7 @@ Schedule it daily with the included GitHub Actions workflow, or a cron job.
 """
 
 import os
+import re
 import json
 import base64
 import smtplib
@@ -75,7 +76,7 @@ CARDS = [
  dict(name="Light Machamp", set="Neo Destiny 25/105 · 1st Ed", q="Light Machamp Neo Destiny 25 1st Edition",
       must=["light machamp",["neo destiny","25/105"]], ed="1st", lang="en", var="any", img="neo4/25", note="illus. Miki Tanaka"),
  dict(name="Smeargle", set="Wizards Black Star Promo #32", q="Smeargle Black Star Promo 32",
-      must=["smeargle",["promo","32"]], ed="any", lang="en", var="any", img="basep/32", note="Komiya, promo"),
+      must=["smeargle",["black star","wizards","promo"],["32","#32"]], ed="any", lang="en", var="any", img="basep/32", note="Komiya, promo"),
 
  # --- e-Card era English (2002-03): no 1st Ed; reverse holo preferred ---
  dict(name="Cubone", set="Expedition 103/165 · Rev Holo", q="Cubone Expedition 103 reverse holo",
@@ -93,7 +94,7 @@ CARDS = [
 
  # --- EX era English (2003-07): reverse holo preferred ---
  dict(name="Magnemite", set="EX Dragon 61/97 · Rev Holo", q="Magnemite EX Dragon 61 reverse holo",
-      must=["magnemite",["dragon","61/97"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex3/61", note="Komiya - verify vs Trainer Kit"),
+      must=["magnemite",["ex dragon","61/97"],["reverse","rev holo"]], excl=["dragon majesty","dragons exalted","dragon frontiers","dragon vault"], ed="any", lang="en", var="reverse", img="ex3/61", note="Komiya - verify vs Trainer Kit"),
  dict(name="Exeggcute", set="EX FireRed & LeafGreen 33/112 · Rev Holo", q="Exeggcute FireRed LeafGreen 33 reverse holo",
       must=["exeggcute",["firered","leafgreen","33/112"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex6/33", note="Komiya"),
  dict(name="Swinub", set="EX Team Rocket Returns 79/109 · Rev Holo", q="Swinub Team Rocket Returns 79 reverse holo",
@@ -103,11 +104,11 @@ CARDS = [
  dict(name="Pelipper", set="EX Deoxys 21/107 · Rev Holo", q="Pelipper EX Deoxys 21 reverse holo",
       must=["pelipper",["deoxys","21/107"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex8/21", note="Komiya"),
  dict(name="Miltank", set="EX Unseen Forces 42/115 · Rev Holo", q="Miltank Unseen Forces 42 reverse holo",
-      must=["miltank",["unseen forces","42/115"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex11/42", note="Komiya"),
+      must=["miltank",["unseen forces","42/115"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex10/42", note="Komiya"),
  dict(name="Sandshrew", set="EX Delta Species 82/113 · Rev Holo", q="Sandshrew Delta Species 82 reverse holo",
-      must=["sandshrew",["delta species","82/113"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex13/82", note="Komiya"),
+      must=["sandshrew",["delta species","82/113"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex11/82", note="Komiya"),
  dict(name="Drowzee", set="EX Delta Species 67/113 · Rev Holo", q="Drowzee Delta Species 67 reverse holo",
-      must=["drowzee",["delta species","67/113"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex13/67", note="Komiya"),
+      must=["drowzee",["delta species","67/113"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex11/67", note="Komiya"),
  dict(name="Dugtrio (CG)", set="EX Crystal Guardians 5/100 · Rev Holo", q="Dugtrio Crystal Guardians 5 reverse holo",
       must=["dugtrio",["crystal guardians","5/100"],["reverse","rev holo"]], ed="any", lang="en", var="reverse", img="ex14/5", note="Komiya"),
 
@@ -339,6 +340,31 @@ def cost_breakdown(listing):
 
 FIRST_ED = ["1st edition", "1st ed", "first edition", "1st-edition", "first ed"]
 
+# A card name followed by any of these is a DIFFERENT, usually far pricier card
+# (e.g. "Onix V" is not "Onix"). Checked immediately after the name.
+# Note the "ex" case is ambiguous: "Magnemite ex" is a variant card, but
+# "Magnemite EX Dragon" is the EX-era SET name -- so "ex" only counts as a
+# variant when it isn't followed by an EX-era set word.
+EX_SETS = (r"dragon|deoxys|sandstorm|ruby|sapphire|emerald|unseen|delta|legend|"
+           r"holon|crystal|power\s+keepers|team|hidden|firered|leafgreen|trainer\s+kit")
+VARIANT_SUFFIX = re.compile(
+    r"\s*(v\b|v-?max|v-?star|v-?union|gx\b|break\b|prime\b|star\b|"
+    r"lv\.?\s*x|δ|radiant\b|shining\b|"
+    r"ex\b(?!\s*(" + EX_SETS + r")))",
+    re.I)
+
+
+def name_is_exact(title, name):
+    """True if `name` appears in `title` and is NOT part of a variant card name.
+
+    Tolerates apostrophe forms (Farfetch'd / Farfetchd / Farfetch’d) so the
+    variant check looks at the text after the FULL name, not mid-word."""
+    pattern = r"\b" + re.escape(name) + r"(?:['\u2019]?d)?\b"
+    for m in re.finditer(pattern, title, re.I):
+        if not VARIANT_SUFFIX.match(title[m.end():]):
+            return True          # found a clean, unsuffixed occurrence
+    return False
+
 
 def matches(listing, card):
     """True only if the listing title genuinely is this card/edition/language.
@@ -380,10 +406,15 @@ def matches(listing, card):
         return False
     if var == "regular" and (is_rev or is_holo):
         return False
-    # 5) must-have terms (a list entry = at least one of the alternatives)
-    for m in card.get("must", []):
+    # 5) must-have terms. The FIRST term is the card name and is checked with
+    #    variant-awareness so "Onix V" never counts as "Onix".
+    musts = card.get("must", [])
+    for i, m in enumerate(musts):
         if isinstance(m, (list, tuple)):
             if not any(alt.lower() in t for alt in m):
+                return False
+        elif i == 0:
+            if not name_is_exact(t, m):
                 return False
         elif m.lower() not in t:
             return False
