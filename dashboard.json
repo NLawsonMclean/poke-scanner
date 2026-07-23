@@ -43,6 +43,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 11.04
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 11.04
         }
       ]
     },
@@ -79,6 +83,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 4.99
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 4.99
@@ -125,6 +133,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 94.17
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 94.17
         }
       ]
     },
@@ -164,6 +176,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 8.07
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 8.07
         }
       ]
     },
@@ -200,6 +216,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 54.21
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 54.21
@@ -250,6 +270,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 26.17
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 26.17
         }
       ]
     },
@@ -286,6 +310,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 10.09
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 10.09
@@ -332,6 +360,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 7.0
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 7.0
         }
       ]
     },
@@ -375,6 +407,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 36.81
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 36.81
         }
       ]
     },
@@ -397,14 +433,14 @@
         "count": 37,
         "median_gbp": 12,
         "cheapest_gbp": 4,
-        "url": "https://www.ebay.com/itm/373093575208?_skw=Smeargle+Black+Star+Promo+32&hash=item56de1c2a28:g:EkQAAeSwdJpqVIkN&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZgAFR%2Fm8beikm%2FtY6U%2BcOuljsNWgj00mPGVBXSk3VVxV%2F5oiW1t%2BIXlW0iEsQRLrQg670IGw0mkTPLxb%2F%2BTI3gRs61ZkxUYX0FSoepASoJ013o2KtXX3081A4%2FFkssIYJ258ZLeRneKpNSbWtC541LrKXUPbSbyiFegA7YUXk9xb2Q0Lb5xOniWyCd10HncSySNP77qQKsfckb79BK4gAlohdtMoLQQQERAsQrP%2Fkcy%2BK4VqmNPmiiue42eb62KXxt6Akl9fB87xSkVgMpWl21gOFE8iLe%2FvjA2VoHXm8jf2i%2B4%2Bx0NqbQyCT2FqszHjg%3D",
+        "url": "https://www.ebay.com/itm/373093575208?_skw=Smeargle+Black+Star+Promo+32&hash=item56de1c2a28:g:EkQAAeSwdJpqVIkN&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZgAFR%2Fm8beikm%2FtY6U%2BcOuljsNWgj00mPGVBXSk3VVxV%2F5oiW1t%2BIXlW0iEsQRLrQg670IGw0mkTPLxb%2F%2BTI3gRs61ZkxUYX0FSoepASoJ013o2KtXX3081A4%2FFkssIYLLPFjLqfQlpuzRJdodIFEL8cwC2Whq%2Fd54%2Fd7TlmzwSc930%2BgvOPmlEqsw8fuHXJhg8XWymGFNDzGyQv8RKzMTXwMnGyPFWAlcyjnAlnVhwmPejWCsSXGUfu8XYyTD%2F54FJJ%2BxjO2evaoN4lNf2HRM8%2BSypvynD4NIhPr9qoC0tiH4t4mPnSc9v9rNRQy8tNc%3D",
         "bids": 0,
         "ends": ""
       },
       "listings": 38,
       "deal_count": 9,
       "best_discount_pct": 63,
-      "best_url": "https://www.ebay.com/itm/373093575208?_skw=Smeargle+Black+Star+Promo+32&hash=item56de1c2a28:g:EkQAAeSwdJpqVIkN&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZgAFR%2Fm8beikm%2FtY6U%2BcOuljsNWgj00mPGVBXSk3VVxV%2F5oiW1t%2BIXlW0iEsQRLrQg670IGw0mkTPLxb%2F%2BTI3gRs61ZkxUYX0FSoepASoJ013o2KtXX3081A4%2FFkssIYJ258ZLeRneKpNSbWtC541LrKXUPbSbyiFegA7YUXk9xb2Q0Lb5xOniWyCd10HncSySNP77qQKsfckb79BK4gAlohdtMoLQQQERAsQrP%2Fkcy%2BK4VqmNPmiiue42eb62KXxt6Akl9fB87xSkVgMpWl21gOFE8iLe%2FvjA2VoHXm8jf2i%2B4%2Bx0NqbQyCT2FqszHjg%3D",
+      "best_url": "https://www.ebay.com/itm/373093575208?_skw=Smeargle+Black+Star+Promo+32&hash=item56de1c2a28:g:EkQAAeSwdJpqVIkN&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZgAFR%2Fm8beikm%2FtY6U%2BcOuljsNWgj00mPGVBXSk3VVxV%2F5oiW1t%2BIXlW0iEsQRLrQg670IGw0mkTPLxb%2F%2BTI3gRs61ZkxUYX0FSoepASoJ013o2KtXX3081A4%2FFkssIYLLPFjLqfQlpuzRJdodIFEL8cwC2Whq%2Fd54%2Fd7TlmzwSc930%2BgvOPmlEqsw8fuHXJhg8XWymGFNDzGyQv8RKzMTXwMnGyPFWAlcyjnAlnVhwmPejWCsSXGUfu8XYyTD%2F54FJJ%2BxjO2evaoN4lNf2HRM8%2BSypvynD4NIhPr9qoC0tiH4t4mPnSc9v9rNRQy8tNc%3D",
       "image": "https://i.ebayimg.com/images/g/EkQAAeSwdJpqVIkN/s-l225.jpg",
       "ref_image": "https://images.pokemontcg.io/basep/32.png",
       "target_gbp": null,
@@ -418,6 +454,10 @@
         "source": "IT"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 11.98
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 11.98
@@ -460,6 +500,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 59.82
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 59.82
         }
       ]
     },
@@ -496,6 +540,10 @@
         "source": "GB"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 44.3
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 44.3
@@ -538,6 +586,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 132.72
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 132.72
         }
       ]
     },
@@ -577,6 +629,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 56.0
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 56.0
         }
       ]
     },
@@ -613,6 +669,10 @@
         "source": "DE"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 157.86
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 157.86
@@ -662,6 +722,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 10.79
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 10.79
         }
       ]
     },
@@ -698,6 +762,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 33.64
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 33.64
@@ -740,6 +808,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 74.77
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 74.77
         }
       ]
     },
@@ -776,6 +848,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 25.66
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 25.66
@@ -818,6 +894,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 100.94
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 100.94
         }
       ]
     },
@@ -854,6 +934,10 @@
         "source": "GB"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 49.97
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 49.97
@@ -896,6 +980,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 67.29
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 67.29
         }
       ]
     },
@@ -932,6 +1020,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 56.08
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 56.08
@@ -974,6 +1066,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 36.19
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 36.19
         }
       ]
     },
@@ -1010,6 +1106,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 2.99
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 2.99
@@ -1056,6 +1156,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 7.48
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 7.48
         }
       ]
     },
@@ -1092,6 +1196,10 @@
         "source": "GB"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 18.69
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 18.69
@@ -1134,6 +1242,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 22.42
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 22.42
         }
       ]
     },
@@ -1170,6 +1282,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 1.91
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 1.91
@@ -1219,6 +1335,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 7.45
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 7.45
         }
       ]
     },
@@ -1255,6 +1375,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 2.98
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 2.98
@@ -1297,6 +1421,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 8.22
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 8.22
         }
       ]
     },
@@ -1309,14 +1437,14 @@
       "cheapest_gbp": 1,
       "auction": null,
       "bin": {
-        "count": 55,
+        "count": 54,
         "median_gbp": 2,
         "cheapest_gbp": 1,
         "url": "https://www.ebay.com/itm/298524142721?_skw=Croconaw+Fusion+Strike+56+reverse+holo&hash=item45816cec81:g:NnUAAeSwYlpqYEPT",
         "bids": 0,
         "ends": ""
       },
-      "listings": 55,
+      "listings": 54,
       "deal_count": 26,
       "best_discount_pct": 63,
       "best_url": "https://www.ebay.com/itm/298524142721?_skw=Croconaw+Fusion+Strike+56+reverse+holo&hash=item45816cec81:g:NnUAAeSwYlpqYEPT",
@@ -1336,6 +1464,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 1.68
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 1.61
         }
       ]
     },
@@ -1375,6 +1507,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 1.49
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 1.49
         }
       ]
     },
@@ -1411,6 +1547,10 @@
         "source": "JP"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 273.5
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 273.5
@@ -1460,6 +1600,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 74.02
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 74.02
         }
       ]
     },
@@ -1496,6 +1640,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 23.99
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 23.99
@@ -1538,6 +1686,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 73.25
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 73.25
         }
       ]
     },
@@ -1574,6 +1726,10 @@
         "source": "GB"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 52.34
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 52.34
@@ -1616,6 +1772,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 61.82
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 61.82
         }
       ]
     },
@@ -1652,6 +1812,10 @@
         "source": "GB"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 78.5
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 78.5
@@ -1694,6 +1858,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 157.66
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 157.66
         }
       ]
     },
@@ -1733,6 +1901,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 3105.37
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 3105.37
         }
       ]
     },
@@ -1745,14 +1917,14 @@
       "cheapest_gbp": 1,
       "auction": null,
       "bin": {
-        "count": 120,
+        "count": 121,
         "median_gbp": 4,
         "cheapest_gbp": 1,
         "url": "https://www.ebay.com/itm/395807452796?_skw=Bellsprout+Japanese+Pokemon+card&hash=item5c27f66e7c:g:yZ4AAeSwQMdp-ZB0",
         "bids": 0,
         "ends": ""
       },
-      "listings": 120,
+      "listings": 121,
       "deal_count": 48,
       "best_discount_pct": 78,
       "best_url": "https://www.ebay.com/itm/395807452796?_skw=Bellsprout+Japanese+Pokemon+card&hash=item5c27f66e7c:g:yZ4AAeSwQMdp-ZB0",
@@ -1772,6 +1944,10 @@
         {
           "date": "2026-07-23",
           "median_gbp": 4.48
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 4.49
         }
       ]
     },
@@ -1815,6 +1991,10 @@
         "source": "US"
       },
       "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 22.43
+        },
         {
           "date": "2026-07-23",
           "median_gbp": 22.43
