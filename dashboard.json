@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-12",
+  "updated": "2026-09-13",
   "dest": "UK",
-  "fx_note": "USD->GBP 0.740, JPY->GBP 0.0048",
+  "fx_note": "USD->GBP 0.739, JPY->GBP 0.0048",
   "cards": [
     {
       "query": "Slowpoke Neo Genesis 73 1st Edition",
@@ -12,15 +12,15 @@
       "cheapest_gbp": 4,
       "auction": null,
       "bin": {
-        "count": 36,
+        "count": 34,
         "median_gbp": 11,
         "cheapest_gbp": 4,
         "url": "https://www.ebay.com/itm/297861312766?_skw=Slowpoke+Neo+Genesis+73+1st+Edition&hash=item4559eaf0fe:g:qSsAAeSwE6dpRpIj",
         "bids": 0,
         "ends": ""
       },
-      "listings": 36,
-      "deal_count": 7,
+      "listings": 34,
+      "deal_count": 6,
       "best_discount_pct": 66,
       "best_url": "https://www.ebay.com/itm/297861312766?_skw=Slowpoke+Neo+Genesis+73+1st+Edition&hash=item4559eaf0fe:g:qSsAAeSwE6dpRpIj",
       "image": "https://i.ebayimg.com/images/g/qSsAAeSwE6dpRpIj/s-l225.jpg",
@@ -267,6 +267,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 11.09
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 11.46
         }
       ]
     },
@@ -279,14 +283,14 @@
       "cheapest_gbp": 2,
       "auction": null,
       "bin": {
-        "count": 34,
+        "count": 35,
         "median_gbp": 6,
         "cheapest_gbp": 2,
         "url": "https://www.ebay.com/itm/147057447422?_skw=Pokemon+March+Neo+Genesis+102+1st+Edition&hash=item223d4e91fe:g:sSkAAeSwx1FpUCVk",
         "bids": 0,
         "ends": ""
       },
-      "listings": 34,
+      "listings": 35,
       "deal_count": 6,
       "best_discount_pct": 59,
       "best_url": "https://www.ebay.com/itm/147057447422?_skw=Pokemon+March+Neo+Genesis+102+1st+Edition&hash=item223d4e91fe:g:sSkAAeSwx1FpUCVk",
@@ -530,6 +534,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 5.91
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 5.91
         }
       ]
     },
@@ -539,11 +547,11 @@
       "set": "Neo Revelation 5/64 \u00b7 Holo \u00b7 1st Ed",
       "note": "Komiya",
       "median_gbp": 104,
-      "cheapest_gbp": 32,
+      "cheapest_gbp": 20,
       "auction": {
         "count": 1,
-        "median_gbp": 32,
-        "cheapest_gbp": 32,
+        "median_gbp": 20,
+        "cheapest_gbp": 20,
         "url": "https://www.ebay.co.uk/itm/158265110448?_skw=Delibird+Neo+Revelation+5%2F64+Holo+1st+Edition&hash=item24d955efb0:g:0AQAAeSwVzdqnck3",
         "bids": 0,
         "ends": "2026-09-13T20:16:10.000Z"
@@ -558,18 +566,18 @@
       },
       "listings": 5,
       "deal_count": 2,
-      "best_discount_pct": 71,
+      "best_discount_pct": 82,
       "best_url": "https://www.ebay.co.uk/itm/158265110448?_skw=Delibird+Neo+Revelation+5%2F64+Holo+1st+Edition&hash=item24d955efb0:g:0AQAAeSwVzdqnck3",
       "image": "https://i.ebayimg.com/images/g/0AQAAeSwVzdqnck3/s-l225.jpg",
       "ref_image": "https://images.pokemontcg.io/neo3/5.png",
       "target_gbp": null,
       "cost": {
-        "card_gbp": 32,
+        "card_gbp": 20,
         "ship_gbp": 3,
         "tax_uk_gbp": 0,
-        "tax_sg_gbp": 3,
-        "total_uk_gbp": 35,
-        "total_sg_gbp": 38,
+        "tax_sg_gbp": 2,
+        "total_uk_gbp": 23,
+        "total_sg_gbp": 25,
         "source": "GB"
       },
       "history": [
@@ -804,6 +812,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 103.53
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 103.52
         }
       ]
     },
@@ -816,14 +828,14 @@
       "cheapest_gbp": 4,
       "auction": null,
       "bin": {
-        "count": 25,
+        "count": 26,
         "median_gbp": 7,
         "cheapest_gbp": 4,
         "url": "https://www.ebay.com/itm/374346009905?_skw=Octillery+Neo+Revelation+34+1st+Edition&hash=item5728c2cd31:g:dgQAAOSwtD5ja~GO",
         "bids": 0,
         "ends": ""
       },
-      "listings": 25,
+      "listings": 26,
       "deal_count": 6,
       "best_discount_pct": 42,
       "best_url": "https://www.ebay.com/itm/374346009905?_skw=Octillery+Neo+Revelation+34+1st+Edition&hash=item5728c2cd31:g:dgQAAOSwtD5ja~GO",
@@ -1067,6 +1079,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 7.37
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 7.38
         }
       ]
     },
@@ -1334,6 +1350,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 66.56
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 66.55
         }
       ]
     },
@@ -1342,32 +1362,32 @@
       "name": "Dark Omastar",
       "set": "Neo Destiny 19/105 \u00b7 1st Ed",
       "note": "Komiya",
-      "median_gbp": 49,
-      "cheapest_gbp": 49,
+      "median_gbp": 37,
+      "cheapest_gbp": 26,
       "auction": null,
       "bin": {
-        "count": 1,
-        "median_gbp": 49,
-        "cheapest_gbp": 49,
-        "url": "https://www.ebay.com/itm/407159923867?_skw=Dark+Omastar+Neo+Destiny+19+1st+Edition&hash=item5ecc9f649b:g:a8YAAeSwEu1qh7pu",
+        "count": 2,
+        "median_gbp": 37,
+        "cheapest_gbp": 26,
+        "url": "https://www.ebay.com/itm/336791802236?_skw=Dark+Omastar+Neo+Destiny+19+1st+Edition&hash=item4e6a5b117c:g:NO8AAeSwINFqpkxw",
         "bids": 0,
         "ends": ""
       },
-      "listings": 1,
-      "deal_count": 0,
-      "best_discount_pct": 0,
-      "best_url": "https://www.ebay.com/itm/407159923867?_skw=Dark+Omastar+Neo+Destiny+19+1st+Edition&hash=item5ecc9f649b:g:a8YAAeSwEu1qh7pu",
-      "image": "https://i.ebayimg.com/images/g/a8YAAeSwEu1qh7pu/s-l225.jpg",
+      "listings": 2,
+      "deal_count": 1,
+      "best_discount_pct": 30,
+      "best_url": "https://www.ebay.com/itm/336791802236?_skw=Dark+Omastar+Neo+Destiny+19+1st+Edition&hash=item4e6a5b117c:g:NO8AAeSwINFqpkxw",
+      "image": "https://i.ebayimg.com/images/g/NO8AAeSwINFqpkxw/s-l225.jpg",
       "ref_image": "https://images.pokemontcg.io/neo4/19.png",
       "target_gbp": null,
       "cost": {
-        "card_gbp": 49,
-        "ship_gbp": 5,
+        "card_gbp": 26,
+        "ship_gbp": 0,
         "tax_uk_gbp": 0,
-        "tax_sg_gbp": 5,
-        "total_uk_gbp": 54,
-        "total_sg_gbp": 59,
-        "source": "CA"
+        "tax_sg_gbp": 2,
+        "total_uk_gbp": 26,
+        "total_sg_gbp": 28,
+        "source": "US"
       },
       "history": [
         {
@@ -1541,6 +1561,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 48.53
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 37.2
         }
       ]
     },
@@ -1808,6 +1832,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 11.09
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 11.09
         }
       ]
     },
@@ -2071,6 +2099,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 10.67
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 10.67
         }
       ]
     },
@@ -2080,31 +2112,31 @@
       "set": "Neo Destiny 25/105 \u00b7 1st Ed",
       "note": "illus. Miki Tanaka",
       "median_gbp": 40,
-      "cheapest_gbp": 40,
+      "cheapest_gbp": 35,
       "auction": null,
       "bin": {
-        "count": 2,
+        "count": 3,
         "median_gbp": 40,
-        "cheapest_gbp": 40,
-        "url": "https://www.ebay.co.uk/itm/318664672307?_skw=Light+Machamp+Neo+Destiny+25+1st+Edition&hash=item4a31e50433:g:iZUAAeSwU9BqBG~l",
+        "cheapest_gbp": 35,
+        "url": "https://www.ebay.com/itm/128076134675?_skw=Light+Machamp+Neo+Destiny+25+1st+Edition&hash=item1dd1eeb913:g:AMsAAeSw6pdqpaf3",
         "bids": 0,
         "ends": ""
       },
-      "listings": 2,
+      "listings": 3,
       "deal_count": 0,
       "best_discount_pct": 0,
-      "best_url": "https://www.ebay.co.uk/itm/318664672307?_skw=Light+Machamp+Neo+Destiny+25+1st+Edition&hash=item4a31e50433:g:iZUAAeSwU9BqBG~l",
-      "image": "https://i.ebayimg.com/images/g/iZUAAeSwU9BqBG~l/s-l225.jpg",
+      "best_url": "https://www.ebay.com/itm/128076134675?_skw=Light+Machamp+Neo+Destiny+25+1st+Edition&hash=item1dd1eeb913:g:AMsAAeSw6pdqpaf3",
+      "image": "https://i.ebayimg.com/images/g/AMsAAeSw6pdqpaf3/s-l225.jpg",
       "ref_image": "https://images.pokemontcg.io/neo4/25.png",
       "target_gbp": null,
       "cost": {
-        "card_gbp": 40,
+        "card_gbp": 35,
         "ship_gbp": 0,
         "tax_uk_gbp": 0,
-        "tax_sg_gbp": 4,
-        "total_uk_gbp": 40,
-        "total_sg_gbp": 44,
-        "source": "GB"
+        "tax_sg_gbp": 3,
+        "total_uk_gbp": 35,
+        "total_sg_gbp": 38,
+        "source": "US"
       },
       "history": [
         {
@@ -2338,6 +2370,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 40.33
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 39.99
         }
       ]
     },
@@ -2350,17 +2386,17 @@
       "cheapest_gbp": 4,
       "auction": null,
       "bin": {
-        "count": 33,
+        "count": 34,
         "median_gbp": 14,
         "cheapest_gbp": 4,
-        "url": "https://www.ebay.co.uk/itm/374969685835?_skw=Smeargle+Black+Star+Promo+32&hash=item574def574b:g:GVYAAeSwFJVqVImn&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGYaWsxqw%2FZiX6CYBaDTK2%2BRFaVZaqNr0jPrWAboC4R%2BVqssJaOJFg68E5NdQrbvHikiao9UW7mZEf7UdPjgLUilUyouOrLylDUjMKxZI0wJ9bwgUJBZSfQvhgN1HQfghDzNlj%2BgGncxjRSyJu3HcwLFPZAHd%2F2E%2Bs2ItYfMXwQcWpeVJ5VsrEVZgFkn3gusPhfNz6gqcUY9aRFvi%2FKnPYZz1Rx%2BWg6ycbSD4QOjPiKvC2fJXnPNwPALxk3ygPbd6dkep04waVqlp6xT2Iu%2FB9OLoagjE%2FDADYDQ5HM4O%2FXvsgmROPgztv3KUPzJ2LMniRI%3D",
+        "url": "https://www.ebay.co.uk/itm/374969685835?_skw=Smeargle+Black+Star+Promo+32&hash=item574def574b:g:GVYAAeSwFJVqVImn&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGYaWsxqw%2FZiX6CYBaDTK2%2BRFaVZaqNr0jPrWAboC4R%2BVqssJaOJFg68E5NdQrbvHikiao9UW7mZEf7UdPjgLUilUyouOrLylDUjMKxZI0wJ9bwgUJBZSfQvhgN1HQfghDxJ2L61uZniGowCrbj9CTV3VTgVbBZYtr3iSkHYBKV%2F4W879SF1ahGWhWb0%2FYrHr9QdyqeqyREAvpNh1NmXczWjksbc5B38%2FvJkSFtPY7E%2Bwd%2FEFmHgkdHhyuAFGNMnsn%2BWrFGEvM%2F9v3pyHS67Z%2FdP6vcUvlf0bfu7DLp7KE6068%2BHKgSdhDWnGTMpJdzEfCU%3D",
         "bids": 0,
         "ends": ""
       },
-      "listings": 33,
+      "listings": 34,
       "deal_count": 6,
       "best_discount_pct": 72,
-      "best_url": "https://www.ebay.co.uk/itm/374969685835?_skw=Smeargle+Black+Star+Promo+32&hash=item574def574b:g:GVYAAeSwFJVqVImn&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGYaWsxqw%2FZiX6CYBaDTK2%2BRFaVZaqNr0jPrWAboC4R%2BVqssJaOJFg68E5NdQrbvHikiao9UW7mZEf7UdPjgLUilUyouOrLylDUjMKxZI0wJ9bwgUJBZSfQvhgN1HQfghDzNlj%2BgGncxjRSyJu3HcwLFPZAHd%2F2E%2Bs2ItYfMXwQcWpeVJ5VsrEVZgFkn3gusPhfNz6gqcUY9aRFvi%2FKnPYZz1Rx%2BWg6ycbSD4QOjPiKvC2fJXnPNwPALxk3ygPbd6dkep04waVqlp6xT2Iu%2FB9OLoagjE%2FDADYDQ5HM4O%2FXvsgmROPgztv3KUPzJ2LMniRI%3D",
+      "best_url": "https://www.ebay.co.uk/itm/374969685835?_skw=Smeargle+Black+Star+Promo+32&hash=item574def574b:g:GVYAAeSwFJVqVImn&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGYaWsxqw%2FZiX6CYBaDTK2%2BRFaVZaqNr0jPrWAboC4R%2BVqssJaOJFg68E5NdQrbvHikiao9UW7mZEf7UdPjgLUilUyouOrLylDUjMKxZI0wJ9bwgUJBZSfQvhgN1HQfghDxJ2L61uZniGowCrbj9CTV3VTgVbBZYtr3iSkHYBKV%2F4W879SF1ahGWhWb0%2FYrHr9QdyqeqyREAvpNh1NmXczWjksbc5B38%2FvJkSFtPY7E%2Bwd%2FEFmHgkdHhyuAFGNMnsn%2BWrFGEvM%2F9v3pyHS67Z%2FdP6vcUvlf0bfu7DLp7KE6068%2BHKgSdhDWnGTMpJdzEfCU%3D",
       "image": "https://i.ebayimg.com/images/g/GVYAAeSwFJVqVImn/s-l225.jpg",
       "ref_image": "https://images.pokemontcg.io/basep/32.png",
       "target_gbp": null,
@@ -2601,6 +2637,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 14.01
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 14.03
         }
       ]
     },
@@ -2728,6 +2768,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 369.76
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 369.72
         }
       ]
     },
@@ -2991,6 +3035,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 46.47
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 46.47
         }
       ]
     },
@@ -2999,32 +3047,32 @@
       "name": "Tyrogue",
       "set": "Aquapolis 63/147 \u00b7 Rev Holo",
       "note": "Komiya",
-      "median_gbp": 61,
-      "cheapest_gbp": 52,
+      "median_gbp": 70,
+      "cheapest_gbp": 70,
       "auction": null,
       "bin": {
-        "count": 2,
-        "median_gbp": 61,
-        "cheapest_gbp": 52,
-        "url": "https://www.ebay.com/itm/227512524832?_skw=Tyrogue+Aquapolis+63+reverse+holo&hash=item34f8cda020:g:Kc0AAeSwtrBqoEj6",
+        "count": 1,
+        "median_gbp": 70,
+        "cheapest_gbp": 70,
+        "url": "https://www.ebay.co.uk/itm/800591424497?_skw=Tyrogue+Aquapolis+63+reverse+holo&hash=itemba66f7abf1:g:OKMAAeSwhq5qlYm9",
         "bids": 0,
         "ends": ""
       },
-      "listings": 2,
+      "listings": 1,
       "deal_count": 0,
       "best_discount_pct": 0,
-      "best_url": "https://www.ebay.com/itm/227512524832?_skw=Tyrogue+Aquapolis+63+reverse+holo&hash=item34f8cda020:g:Kc0AAeSwtrBqoEj6",
-      "image": "https://i.ebayimg.com/images/g/Kc0AAeSwtrBqoEj6/s-l225.jpg",
+      "best_url": "https://www.ebay.co.uk/itm/800591424497?_skw=Tyrogue+Aquapolis+63+reverse+holo&hash=itemba66f7abf1:g:OKMAAeSwhq5qlYm9",
+      "image": "https://i.ebayimg.com/images/g/OKMAAeSwhq5qlYm9/s-l225.jpg",
       "ref_image": "https://images.pokemontcg.io/ecard2/63.png",
       "target_gbp": null,
       "cost": {
-        "card_gbp": 52,
+        "card_gbp": 70,
         "ship_gbp": 0,
         "tax_uk_gbp": 0,
-        "tax_sg_gbp": 5,
-        "total_uk_gbp": 52,
-        "total_sg_gbp": 56,
-        "source": "US"
+        "tax_sg_gbp": 6,
+        "total_uk_gbp": 70,
+        "total_sg_gbp": 77,
+        "source": "GB"
       },
       "history": [
         {
@@ -3234,6 +3282,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 61.07
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 70.38
         }
       ]
     },
@@ -3242,20 +3294,20 @@
       "name": "Dugtrio",
       "set": "Skyridge 52/144 \u00b7 Rev Holo",
       "note": "Komiya",
-      "median_gbp": 107,
+      "median_gbp": 74,
       "cheapest_gbp": 74,
       "auction": null,
       "bin": {
-        "count": 2,
-        "median_gbp": 107,
+        "count": 1,
+        "median_gbp": 74,
         "cheapest_gbp": 74,
         "url": "https://www.ebay.co.uk/itm/318719113058?_skw=Dugtrio+Skyridge+52+reverse+holo&hash=item4a3523b762:g:gWIAAeSwazxqfJX8",
         "bids": 0,
         "ends": ""
       },
-      "listings": 2,
-      "deal_count": 1,
-      "best_discount_pct": 31,
+      "listings": 1,
+      "deal_count": 0,
+      "best_discount_pct": 0,
       "best_url": "https://www.ebay.co.uk/itm/318719113058?_skw=Dugtrio+Skyridge+52+reverse+holo&hash=item4a3523b762:g:gWIAAeSwazxqfJX8",
       "image": "https://i.ebayimg.com/images/g/gWIAAeSwazxqfJX8/s-l225.jpg",
       "ref_image": "https://images.pokemontcg.io/ecard3/52.png",
@@ -3489,6 +3541,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 107.0
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 73.5
         }
       ]
     },
@@ -3501,15 +3557,15 @@
       "cheapest_gbp": 2,
       "auction": null,
       "bin": {
-        "count": 13,
+        "count": 14,
         "median_gbp": 15,
         "cheapest_gbp": 2,
         "url": "https://www.ebay.com/itm/377445270382?_skw=Magnemite+EX+Dragon+61+reverse+holo&hash=item57e17dc36e:g:MuAAAeSwW6dqjOvk",
         "bids": 0,
         "ends": ""
       },
-      "listings": 13,
-      "deal_count": 4,
+      "listings": 14,
+      "deal_count": 5,
       "best_discount_pct": 85,
       "best_url": "https://www.ebay.com/itm/377445270382?_skw=Magnemite+EX+Dragon+61+reverse+holo&hash=item57e17dc36e:g:MuAAAeSwW6dqjOvk",
       "image": "https://i.ebayimg.com/images/g/MuAAAeSwW6dqjOvk/s-l225.jpg",
@@ -3752,6 +3808,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 14.78
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 14.78
         }
       ]
     },
@@ -3760,20 +3820,20 @@
       "name": "Exeggcute",
       "set": "EX FireRed & LeafGreen 33/112 \u00b7 Rev Holo",
       "note": "Komiya",
-      "median_gbp": 40,
+      "median_gbp": 44,
       "cheapest_gbp": 28,
       "auction": null,
       "bin": {
-        "count": 3,
-        "median_gbp": 40,
+        "count": 4,
+        "median_gbp": 44,
         "cheapest_gbp": 28,
         "url": "https://www.ebay.com/itm/298375887254?_skw=Exeggcute+FireRed+LeafGreen+33+reverse+holo&hash=item457896b996:g:IDEAAeSwYtFqHgdY",
         "bids": 0,
         "ends": ""
       },
-      "listings": 3,
+      "listings": 4,
       "deal_count": 1,
-      "best_discount_pct": 31,
+      "best_discount_pct": 37,
       "best_url": "https://www.ebay.com/itm/298375887254?_skw=Exeggcute+FireRed+LeafGreen+33+reverse+holo&hash=item457896b996:g:IDEAAeSwYtFqHgdY",
       "image": "https://i.ebayimg.com/images/g/IDEAAeSwYtFqHgdY/s-l225.jpg",
       "ref_image": "https://images.pokemontcg.io/ex6/33.png",
@@ -4015,6 +4075,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 39.93
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 44.0
         }
       ]
     },
@@ -4278,6 +4342,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 77.65
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 77.64
         }
       ]
     },
@@ -4540,6 +4608,10 @@
         },
         {
           "date": "2026-09-12",
+          "median_gbp": 27.43
+        },
+        {
+          "date": "2026-09-13",
           "median_gbp": 27.43
         }
       ]
@@ -4804,6 +4876,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 110.93
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 110.92
         }
       ]
     },
@@ -5067,6 +5143,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 50.12
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 50.12
         }
       ]
     },
@@ -5075,31 +5155,31 @@
       "name": "Sandshrew",
       "set": "EX Delta Species 82/113 \u00b7 Rev Holo",
       "note": "Komiya",
-      "median_gbp": 65,
-      "cheapest_gbp": 55,
+      "median_gbp": 55,
+      "cheapest_gbp": 52,
       "auction": null,
       "bin": {
-        "count": 2,
-        "median_gbp": 65,
-        "cheapest_gbp": 55,
-        "url": "https://www.ebay.com/itm/336790228419?_skw=Sandshrew+Delta+Species+82+reverse+holo&hash=item4e6a430dc3:g:uMUAAeSwmuBqpKwq",
+        "count": 3,
+        "median_gbp": 55,
+        "cheapest_gbp": 52,
+        "url": "https://www.ebay.com/itm/407212807078?_skw=Sandshrew+Delta+Species+82+reverse+holo&hash=item5ecfc653a6:g:PvsAAeSwYWxqpg2j",
         "bids": 0,
         "ends": ""
       },
-      "listings": 2,
+      "listings": 3,
       "deal_count": 0,
       "best_discount_pct": 0,
-      "best_url": "https://www.ebay.com/itm/336790228419?_skw=Sandshrew+Delta+Species+82+reverse+holo&hash=item4e6a430dc3:g:uMUAAeSwmuBqpKwq",
-      "image": "https://i.ebayimg.com/images/g/uMUAAeSwmuBqpKwq/s-l225.jpg",
+      "best_url": "https://www.ebay.com/itm/407212807078?_skw=Sandshrew+Delta+Species+82+reverse+holo&hash=item5ecfc653a6:g:PvsAAeSwYWxqpg2j",
+      "image": "https://i.ebayimg.com/images/g/PvsAAeSwYWxqpg2j/s-l225.jpg",
       "ref_image": "https://images.pokemontcg.io/ex11/82.png",
       "target_gbp": null,
       "cost": {
-        "card_gbp": 55,
+        "card_gbp": 52,
         "ship_gbp": 0,
         "tax_uk_gbp": 0,
         "tax_sg_gbp": 5,
-        "total_uk_gbp": 55,
-        "total_sg_gbp": 60,
+        "total_uk_gbp": 52,
+        "total_sg_gbp": 56,
         "source": "US"
       },
       "history": [
@@ -5290,6 +5370,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 64.7
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 55.46
         }
       ]
     },
@@ -5521,6 +5605,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 80.91
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 80.91
         }
       ]
     },
@@ -5553,7 +5641,7 @@
         "tax_uk_gbp": 0,
         "tax_sg_gbp": 2,
         "total_uk_gbp": 20,
-        "total_sg_gbp": 22,
+        "total_sg_gbp": 21,
         "source": "DE"
       },
       "history": [
@@ -5784,6 +5872,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 61.31
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 61.31
         }
       ]
     },
@@ -5792,20 +5884,20 @@
       "name": "Exeggcute (ROS)",
       "set": "Roaring Skies 1/108 \u00b7 Rev Holo",
       "note": "Komiya",
-      "median_gbp": 3,
+      "median_gbp": 2,
       "cheapest_gbp": 1,
       "auction": null,
       "bin": {
         "count": 38,
-        "median_gbp": 3,
+        "median_gbp": 2,
         "cheapest_gbp": 1,
         "url": "https://www.ebay.com/itm/336128503592?_skw=Exeggcute+Roaring+Skies+1+reverse+holo&hash=item4e42d1ef28:g:mq8AAeSwOthooIq~",
         "bids": 0,
         "ends": ""
       },
       "listings": 38,
-      "deal_count": 17,
-      "best_discount_pct": 72,
+      "deal_count": 6,
+      "best_discount_pct": 57,
       "best_url": "https://www.ebay.com/itm/336128503592?_skw=Exeggcute+Roaring+Skies+1+reverse+holo&hash=item4e42d1ef28:g:mq8AAeSwOthooIq~",
       "image": "https://i.ebayimg.com/images/g/mq8AAeSwOthooIq~/s-l225.jpg",
       "ref_image": "https://images.pokemontcg.io/xy6/1.png",
@@ -6047,6 +6139,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 2.57
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 2.46
         }
       ]
     },
@@ -6055,32 +6151,32 @@
       "name": "Gulpin",
       "set": "Generations RC12 \u00b7 fork-balancing",
       "note": "Komiya",
-      "median_gbp": 7,
-      "cheapest_gbp": 4,
+      "median_gbp": 8,
+      "cheapest_gbp": 5,
       "auction": null,
       "bin": {
-        "count": 50,
-        "median_gbp": 7,
-        "cheapest_gbp": 4,
-        "url": "https://www.ebay.com/itm/157620671511?_skw=Gulpin+Generations+Radiant+Collection+RC12&hash=item24b2ec9417:g:BdcAAeSwlJxpbEIq",
+        "count": 49,
+        "median_gbp": 8,
+        "cheapest_gbp": 5,
+        "url": "https://www.ebay.co.uk/itm/377458242863?_skw=Gulpin+Generations+Radiant+Collection+RC12&hash=item57e243b52f:g:-YcAAeSwEjtqlGc~",
         "bids": 0,
         "ends": ""
       },
-      "listings": 50,
-      "deal_count": 2,
-      "best_discount_pct": 40,
-      "best_url": "https://www.ebay.com/itm/157620671511?_skw=Gulpin+Generations+Radiant+Collection+RC12&hash=item24b2ec9417:g:BdcAAeSwlJxpbEIq",
-      "image": "https://i.ebayimg.com/images/g/BdcAAeSwlJxpbEIq/s-l225.jpg",
+      "listings": 49,
+      "deal_count": 3,
+      "best_discount_pct": 38,
+      "best_url": "https://www.ebay.co.uk/itm/377458242863?_skw=Gulpin+Generations+Radiant+Collection+RC12&hash=item57e243b52f:g:-YcAAeSwEjtqlGc~",
+      "image": "https://i.ebayimg.com/images/g/-YcAAeSwEjtqlGc~/s-l225.jpg",
       "ref_image": "https://images.pokemontcg.io/g1/RC12.png",
       "target_gbp": null,
       "cost": {
-        "card_gbp": 4,
-        "ship_gbp": 0,
+        "card_gbp": 5,
+        "ship_gbp": 1,
         "tax_uk_gbp": 0,
-        "tax_sg_gbp": 0,
-        "total_uk_gbp": 4,
-        "total_sg_gbp": 5,
-        "source": "US"
+        "tax_sg_gbp": 1,
+        "total_uk_gbp": 6,
+        "total_sg_gbp": 6,
+        "source": "GB"
       },
       "history": [
         {
@@ -6314,6 +6410,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 7.4
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 7.59
         }
       ]
     },
@@ -6326,14 +6426,14 @@
       "cheapest_gbp": 11,
       "auction": null,
       "bin": {
-        "count": 35,
+        "count": 36,
         "median_gbp": 16,
         "cheapest_gbp": 11,
         "url": "https://www.ebay.com/itm/377410869106?_skw=Clefairy+BREAKpoint+81+reverse+holo&hash=item57df70d772:g:fTMAAeSwVhJqe3Dc",
         "bids": 0,
         "ends": ""
       },
-      "listings": 35,
+      "listings": 36,
       "deal_count": 4,
       "best_discount_pct": 31,
       "best_url": "https://www.ebay.com/itm/377410869106?_skw=Clefairy+BREAKpoint+81+reverse+holo&hash=item57df70d772:g:fTMAAeSwVhJqe3Dc",
@@ -6577,6 +6677,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 15.69
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 16.23
         }
       ]
     },
@@ -6585,20 +6689,20 @@
       "name": "Hypno",
       "set": "BREAKpoint 51/122 \u00b7 Rev Holo",
       "note": "Komiya",
-      "median_gbp": 22,
+      "median_gbp": 23,
       "cheapest_gbp": 6,
       "auction": null,
       "bin": {
-        "count": 11,
-        "median_gbp": 22,
+        "count": 10,
+        "median_gbp": 23,
         "cheapest_gbp": 6,
         "url": "https://www.ebay.co.uk/itm/363678083203?_skw=Hypno+BREAKpoint+51+reverse+holo&hash=item54ace72883:g:i7IAAOSw50Jh03~g",
         "bids": 0,
         "ends": ""
       },
-      "listings": 11,
+      "listings": 10,
       "deal_count": 2,
-      "best_discount_pct": 72,
+      "best_discount_pct": 73,
       "best_url": "https://www.ebay.co.uk/itm/363678083203?_skw=Hypno+BREAKpoint+51+reverse+holo&hash=item54ace72883:g:i7IAAOSw50Jh03~g",
       "image": "https://i.ebayimg.com/images/g/i7IAAOSw50Jh03~g/s-l225.jpg",
       "ref_image": "https://images.pokemontcg.io/xy9/51.png",
@@ -6840,6 +6944,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 22.19
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 23.39
         }
       ]
     },
@@ -6852,14 +6960,14 @@
       "cheapest_gbp": 1,
       "auction": null,
       "bin": {
-        "count": 48,
+        "count": 50,
         "median_gbp": 1,
         "cheapest_gbp": 1,
         "url": "https://www.ebay.com/itm/366615000318?_skw=Nosepass+Guardians+Rising+69+reverse+holo&hash=item555bf4f4fe:g:lnsAAeSwGDJqhT1N",
         "bids": 0,
         "ends": ""
       },
-      "listings": 48,
+      "listings": 50,
       "deal_count": 0,
       "best_discount_pct": 0,
       "best_url": "https://www.ebay.com/itm/366615000318?_skw=Nosepass+Guardians+Rising+69+reverse+holo&hash=item555bf4f4fe:g:lnsAAeSwGDJqhT1N",
@@ -7102,6 +7210,10 @@
         },
         {
           "date": "2026-09-12",
+          "median_gbp": 1.47
+        },
+        {
+          "date": "2026-09-13",
           "median_gbp": 1.47
         }
       ]
@@ -7366,6 +7478,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 7.76
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 7.76
         }
       ]
     },
@@ -7378,14 +7494,14 @@
       "cheapest_gbp": 3,
       "auction": null,
       "bin": {
-        "count": 5,
+        "count": 4,
         "median_gbp": 4,
         "cheapest_gbp": 3,
         "url": "https://www.ebay.com/itm/396263776729?_skw=Onix+Lost+Thunder+109+reverse+holo&hash=item5c432961d9:g:qIgAAOSw7qBnw7cH",
         "bids": 0,
         "ends": ""
       },
-      "listings": 5,
+      "listings": 4,
       "deal_count": 2,
       "best_discount_pct": 31,
       "best_url": "https://www.ebay.com/itm/396263776729?_skw=Onix+Lost+Thunder+109+reverse+holo&hash=item5c432961d9:g:qIgAAOSw7qBnw7cH",
@@ -7629,6 +7745,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 3.69
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 4.45
         }
       ]
     },
@@ -7641,14 +7761,14 @@
       "cheapest_gbp": 3,
       "auction": null,
       "bin": {
-        "count": 23,
+        "count": 22,
         "median_gbp": 8,
         "cheapest_gbp": 3,
         "url": "https://www.ebay.co.uk/itm/198632609112?_skw=Wailmer+Cosmic+Eclipse+45+reverse+holo&hash=item2e3f6d1558:g:A64AAeSwynNqouDA",
         "bids": 0,
         "ends": ""
       },
-      "listings": 23,
+      "listings": 22,
       "deal_count": 3,
       "best_discount_pct": 59,
       "best_url": "https://www.ebay.co.uk/itm/198632609112?_skw=Wailmer+Cosmic+Eclipse+45+reverse+holo&hash=item2e3f6d1558:g:A64AAeSwynNqouDA",
@@ -7888,6 +8008,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 7.76
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 7.87
         }
       ]
     },
@@ -7900,14 +8024,14 @@
       "cheapest_gbp": 1,
       "auction": null,
       "bin": {
-        "count": 53,
+        "count": 50,
         "median_gbp": 2,
         "cheapest_gbp": 1,
         "url": "https://www.ebay.com/itm/188906022943?_skw=Croconaw+Fusion+Strike+56+reverse+holo&hash=item2bfbad281f:g:0dsAAeSwoS5qoLgF",
         "bids": 0,
         "ends": ""
       },
-      "listings": 53,
+      "listings": 50,
       "deal_count": 19,
       "best_discount_pct": 63,
       "best_url": "https://www.ebay.com/itm/188906022943?_skw=Croconaw+Fusion+Strike+56+reverse+holo&hash=item2bfbad281f:g:0dsAAeSwoS5qoLgF",
@@ -8147,6 +8271,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 1.77
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 1.72
         }
       ]
     },
@@ -8159,14 +8287,14 @@
       "cheapest_gbp": 1,
       "auction": null,
       "bin": {
-        "count": 58,
+        "count": 55,
         "median_gbp": 1,
         "cheapest_gbp": 1,
         "url": "https://www.ebay.com/itm/327305307019?_skw=Farfetchd+Brilliant+Stars+115+reverse+holo&hash=item4c34eaa38b:g:aRcAAeSws4lqezYR",
         "bids": 0,
         "ends": ""
       },
-      "listings": 58,
+      "listings": 55,
       "deal_count": 1,
       "best_discount_pct": 26,
       "best_url": "https://www.ebay.com/itm/327305307019?_skw=Farfetchd+Brilliant+Stars+115+reverse+holo&hash=item4c34eaa38b:g:aRcAAeSws4lqezYR",
@@ -8406,6 +8534,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 1.47
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 1.47
         }
       ]
     },
@@ -8414,31 +8546,31 @@
       "name": "Snorlax",
       "set": "JP Vending series \u00b7 glossy",
       "note": "JP vending",
-      "median_gbp": 255,
-      "cheapest_gbp": 183,
+      "median_gbp": 243,
+      "cheapest_gbp": 177,
       "auction": null,
       "bin": {
-        "count": 49,
-        "median_gbp": 255,
-        "cheapest_gbp": 183,
-        "url": "https://www.ebay.com/itm/188911588080?_skw=Snorlax+Japanese+vending+glossy+Pokemon&hash=item2bfc0212f0:g:QKAAAeSwKAJqoPdn",
+        "count": 46,
+        "median_gbp": 243,
+        "cheapest_gbp": 177,
+        "url": "https://www.ebay.com/itm/407068969854?_skw=Snorlax+Japanese+vending+glossy+Pokemon&hash=item5ec7338b7e:g:uhEAAeSwtcBqUuhu",
         "bids": 0,
         "ends": ""
       },
-      "listings": 49,
-      "deal_count": 6,
-      "best_discount_pct": 28,
-      "best_url": "https://www.ebay.com/itm/188911588080?_skw=Snorlax+Japanese+vending+glossy+Pokemon&hash=item2bfc0212f0:g:QKAAAeSwKAJqoPdn",
-      "image": "https://i.ebayimg.com/images/g/QKAAAeSwKAJqoPdn/s-l225.jpg",
+      "listings": 46,
+      "deal_count": 1,
+      "best_discount_pct": 27,
+      "best_url": "https://www.ebay.com/itm/407068969854?_skw=Snorlax+Japanese+vending+glossy+Pokemon&hash=item5ec7338b7e:g:uhEAAeSwtcBqUuhu",
+      "image": "https://i.ebayimg.com/images/g/uhEAAeSwtcBqUuhu/s-l225.jpg",
       "ref_image": "",
       "target_gbp": null,
       "cost": {
-        "card_gbp": 183,
-        "ship_gbp": 26,
+        "card_gbp": 177,
+        "ship_gbp": 33,
         "tax_uk_gbp": 42,
         "tax_sg_gbp": 19,
-        "total_uk_gbp": 251,
-        "total_sg_gbp": 228,
+        "total_uk_gbp": 252,
+        "total_sg_gbp": 229,
         "source": "JP"
       },
       "history": [
@@ -8669,6 +8801,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 255.1
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 243.27
         }
       ]
     },
@@ -8677,21 +8813,21 @@
       "name": "Growlithe",
       "set": "JP Vending S3 \u00b7 glossy",
       "note": "JP vending, no EN",
-      "median_gbp": 77,
+      "median_gbp": 81,
       "cheapest_gbp": 11,
       "auction": null,
       "bin": {
-        "count": 44,
-        "median_gbp": 77,
+        "count": 42,
+        "median_gbp": 81,
         "cheapest_gbp": 11,
-        "url": "https://www.ebay.com/itm/395910017057?_skw=Growlithe+Japanese+vending+glossy+Pokemon&hash=item5c2e137021:g:sS8AAOSw5PtnOEUG&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGa2qZGQimLTF792b3YTAmKOtVfY0eoTepD0KJYr0t1IBG3va8jDHwyFAZoLWy4u6ZbkHmr3X9bmLr9LQks3eE6Z5r5BxUiYqm%2B7R3%2BRT5h%2F6QggCxulPyuDSBIGIQGx9qi578rbSnG6KT8ncVmzpeyuKexr5NI2032ZnKyZoNHbMk4PX%2F4mzskI5eMOspy2det%2Bf422OKqi0NAREeokKIwkf4OO51GxsARndxbwV%2B1KbJqizD%2FWnU63Vjr833DqclmtqdZSTyDi9cnab%2BJVun7yN%2BZnH7LyEcWpFRR%2FcAqqaj2YPaPkiRcEWBYAWbnX5hg%3D",
+        "url": "https://www.ebay.com/itm/395910017057?_skw=Growlithe+Japanese+vending+glossy+Pokemon&hash=item5c2e137021:g:sS8AAOSw5PtnOEUG&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGa2qZGQimLTF792b3YTAmKOtVfY0eoTepD0KJYr0t1IBG3va8jDHwyFAZoLWy4u6ZbkHmr3X9bmLr9LQks3eE6Z5r5BxUiYqm%2B7R3%2BRT5h%2F6QggCxulPyuDSBIGIQGx9qj1DDMoXQR26mAtyLOQ1apCHQb7SP87TkweZjHQDsrZ%2B0u%2BuVoRUgP9FuvyHAffdpg%2By6m0tQd6%2B1bpFEyLnL5UGG6HIbDxaKltLhnATRmFpL76utrqGKmHWQi0so403vl11STAEQLhYUVuIr0yOEKbKUngNRaGKsZlgWzuGt2oovGsU2DHFP8x49ec31hZ1%2Bo%3D",
         "bids": 0,
         "ends": ""
       },
-      "listings": 44,
-      "deal_count": 5,
+      "listings": 42,
+      "deal_count": 9,
       "best_discount_pct": 86,
-      "best_url": "https://www.ebay.com/itm/395910017057?_skw=Growlithe+Japanese+vending+glossy+Pokemon&hash=item5c2e137021:g:sS8AAOSw5PtnOEUG&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGa2qZGQimLTF792b3YTAmKOtVfY0eoTepD0KJYr0t1IBG3va8jDHwyFAZoLWy4u6ZbkHmr3X9bmLr9LQks3eE6Z5r5BxUiYqm%2B7R3%2BRT5h%2F6QggCxulPyuDSBIGIQGx9qi578rbSnG6KT8ncVmzpeyuKexr5NI2032ZnKyZoNHbMk4PX%2F4mzskI5eMOspy2det%2Bf422OKqi0NAREeokKIwkf4OO51GxsARndxbwV%2B1KbJqizD%2FWnU63Vjr833DqclmtqdZSTyDi9cnab%2BJVun7yN%2BZnH7LyEcWpFRR%2FcAqqaj2YPaPkiRcEWBYAWbnX5hg%3D",
+      "best_url": "https://www.ebay.com/itm/395910017057?_skw=Growlithe+Japanese+vending+glossy+Pokemon&hash=item5c2e137021:g:sS8AAOSw5PtnOEUG&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGa2qZGQimLTF792b3YTAmKOtVfY0eoTepD0KJYr0t1IBG3va8jDHwyFAZoLWy4u6ZbkHmr3X9bmLr9LQks3eE6Z5r5BxUiYqm%2B7R3%2BRT5h%2F6QggCxulPyuDSBIGIQGx9qj1DDMoXQR26mAtyLOQ1apCHQb7SP87TkweZjHQDsrZ%2B0u%2BuVoRUgP9FuvyHAffdpg%2By6m0tQd6%2B1bpFEyLnL5UGG6HIbDxaKltLhnATRmFpL76utrqGKmHWQi0so403vl11STAEQLhYUVuIr0yOEKbKUngNRaGKsZlgWzuGt2oovGsU2DHFP8x49ec31hZ1%2Bo%3D",
       "image": "https://i.ebayimg.com/images/g/sS8AAOSw5PtnOEUG/s-l225.jpg",
       "ref_image": "",
       "target_gbp": null,
@@ -8928,6 +9064,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 77.08
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 80.59
         }
       ]
     },
@@ -9187,6 +9327,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 25.22
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 25.22
         }
       ]
     },
@@ -9195,18 +9339,18 @@
       "name": "Onix (JP)",
       "set": "JP Vending series \u00b7 glossy",
       "note": "JP vending",
-      "median_gbp": 72,
+      "median_gbp": 76,
       "cheapest_gbp": 6,
       "auction": null,
       "bin": {
-        "count": 28,
-        "median_gbp": 72,
+        "count": 24,
+        "median_gbp": 76,
         "cheapest_gbp": 6,
         "url": "https://www.ebay.com/itm/389558251962?_skw=Onix+Japanese+vending+glossy+Pokemon&hash=item5ab37b31ba:g:eg4AAeSwDSxpfODw",
         "bids": 0,
         "ends": ""
       },
-      "listings": 28,
+      "listings": 24,
       "deal_count": 2,
       "best_discount_pct": 92,
       "best_url": "https://www.ebay.com/itm/389558251962?_skw=Onix+Japanese+vending+glossy+Pokemon&hash=item5ab37b31ba:g:eg4AAeSwDSxpfODw",
@@ -9446,6 +9590,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 72.09
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 75.72
         }
       ]
     },
@@ -9705,6 +9853,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 66.27
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 65.81
         }
       ]
     },
@@ -9960,6 +10112,241 @@
         {
           "date": "2026-09-12",
           "median_gbp": 64.71
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 64.7
+        }
+      ]
+    },
+    {
+      "query": "Janine's Weezing VS Japanese 1st Edition",
+      "name": "Janine's Weezing",
+      "set": "JP VS series \u00b7 1st Ed",
+      "note": "JP VS, no EN",
+      "median_gbp": 96,
+      "cheapest_gbp": 96,
+      "auction": null,
+      "bin": {
+        "count": 1,
+        "median_gbp": 96,
+        "cheapest_gbp": 96,
+        "url": "https://www.ebay.com/itm/407211372860?_skw=Janine%27s+Weezing+VS+Japanese+1st+Edition&hash=item5ecfb0713c:g:IvYAAeSwKcBqpTol",
+        "bids": 0,
+        "ends": ""
+      },
+      "listings": 1,
+      "deal_count": 0,
+      "best_discount_pct": 0,
+      "best_url": "https://www.ebay.com/itm/407211372860?_skw=Janine%27s+Weezing+VS+Japanese+1st+Edition&hash=item5ecfb0713c:g:IvYAAeSwKcBqpTol",
+      "image": "https://i.ebayimg.com/images/g/IvYAAeSwKcBqpTol/s-l225.jpg",
+      "ref_image": "",
+      "target_gbp": null,
+      "cost": {
+        "card_gbp": 96,
+        "ship_gbp": 14,
+        "tax_uk_gbp": 0,
+        "tax_sg_gbp": 10,
+        "total_uk_gbp": 110,
+        "total_sg_gbp": 120,
+        "source": "JP"
+      },
+      "history": [
+        {
+          "date": "2026-07-23",
+          "median_gbp": 78.5
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 78.5
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 78.5
+        },
+        {
+          "date": "2026-07-23",
+          "median_gbp": 78.5
+        },
+        {
+          "date": "2026-07-24",
+          "median_gbp": 78.76
+        },
+        {
+          "date": "2026-07-25",
+          "median_gbp": 78.8
+        },
+        {
+          "date": "2026-07-25",
+          "median_gbp": 78.8
+        },
+        {
+          "date": "2026-07-26",
+          "median_gbp": 78.81
+        },
+        {
+          "date": "2026-07-27",
+          "median_gbp": 78.69
+        },
+        {
+          "date": "2026-07-28",
+          "median_gbp": 78.94
+        },
+        {
+          "date": "2026-07-29",
+          "median_gbp": 79.0
+        },
+        {
+          "date": "2026-07-30",
+          "median_gbp": 78.82
+        },
+        {
+          "date": "2026-07-31",
+          "median_gbp": 78.15
+        },
+        {
+          "date": "2026-08-01",
+          "median_gbp": 86.68
+        },
+        {
+          "date": "2026-08-02",
+          "median_gbp": 86.67
+        },
+        {
+          "date": "2026-08-03",
+          "median_gbp": 86.6
+        },
+        {
+          "date": "2026-08-04",
+          "median_gbp": 86.72
+        },
+        {
+          "date": "2026-08-05",
+          "median_gbp": 86.71
+        },
+        {
+          "date": "2026-08-06",
+          "median_gbp": 86.64
+        },
+        {
+          "date": "2026-08-07",
+          "median_gbp": 86.67
+        },
+        {
+          "date": "2026-08-08",
+          "median_gbp": 86.62
+        },
+        {
+          "date": "2026-08-09",
+          "median_gbp": 86.62
+        },
+        {
+          "date": "2026-08-10",
+          "median_gbp": 86.59
+        },
+        {
+          "date": "2026-08-11",
+          "median_gbp": 86.53
+        },
+        {
+          "date": "2026-08-12",
+          "median_gbp": 86.53
+        },
+        {
+          "date": "2026-08-13",
+          "median_gbp": 77.75
+        },
+        {
+          "date": "2026-08-14",
+          "median_gbp": 86.02
+        },
+        {
+          "date": "2026-08-17",
+          "median_gbp": 85.77
+        },
+        {
+          "date": "2026-08-18",
+          "median_gbp": 85.74
+        },
+        {
+          "date": "2026-08-19",
+          "median_gbp": 85.79
+        },
+        {
+          "date": "2026-08-20",
+          "median_gbp": 85.62
+        },
+        {
+          "date": "2026-08-21",
+          "median_gbp": 84.37
+        },
+        {
+          "date": "2026-08-22",
+          "median_gbp": 84.36
+        },
+        {
+          "date": "2026-08-23",
+          "median_gbp": 84.34
+        },
+        {
+          "date": "2026-08-24",
+          "median_gbp": 84.34
+        },
+        {
+          "date": "2026-08-25",
+          "median_gbp": 84.37
+        },
+        {
+          "date": "2026-08-26",
+          "median_gbp": 84.35
+        },
+        {
+          "date": "2026-08-27",
+          "median_gbp": 92.46
+        },
+        {
+          "date": "2026-08-28",
+          "median_gbp": 69.16
+        },
+        {
+          "date": "2026-08-31",
+          "median_gbp": 107.29
+        },
+        {
+          "date": "2026-09-01",
+          "median_gbp": 107.29
+        },
+        {
+          "date": "2026-09-02",
+          "median_gbp": 107.36
+        },
+        {
+          "date": "2026-09-03",
+          "median_gbp": 118.6
+        },
+        {
+          "date": "2026-09-04",
+          "median_gbp": 118.6
+        },
+        {
+          "date": "2026-09-05",
+          "median_gbp": 118.6
+        },
+        {
+          "date": "2026-09-06",
+          "median_gbp": 118.6
+        },
+        {
+          "date": "2026-09-07",
+          "median_gbp": 118.6
+        },
+        {
+          "date": "2026-09-08",
+          "median_gbp": 118.6
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 95.75
         }
       ]
     },
@@ -10219,6 +10606,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 174.62
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 174.58
         }
       ]
     },
@@ -10227,21 +10618,21 @@
       "name": "Psyduck (JP)",
       "set": "JP promo",
       "note": "JP promo - verify",
-      "median_gbp": 1998,
+      "median_gbp": 1996,
       "cheapest_gbp": 18,
       "auction": null,
       "bin": {
-        "count": 27,
-        "median_gbp": 1998,
+        "count": 29,
+        "median_gbp": 1996,
         "cheapest_gbp": 18,
-        "url": "https://www.ebay.com/itm/366645328837?_skw=Psyduck+Japanese+promo+Komiya+Pokemon&hash=item555dc3bbc5:g:IHIAAeSwptdqmLxr&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZWabKJMZhcsT%2BCBZ1vFJQ%2BY0ni%2FUMSUnrog1sQLFb9ke9PiyLXllqI7Ibk1QRqyUf7B62fLe%2B0hPz2Scr2NIvivt8%2Fqr%2BiJHkiotLikeiG6vnkVYkaoXb0FPvOgntE%2FJaKdfA3suNVs2gXERk7sxXCKHnyd5LFb9HbhR8OUGgdJef%2FH%2FNifzEWB5vqSnNmmOJlnnhwE0fHV3H1wVNVPySMoGp1KgQQL9zjTq23g4qfqXIOqdmm3g5qClqH7abBGI90%2Bo178mIxl2uImNe55ZtWMoydZRqzswFRLQvzg5Dsi87QtNN7gTCWsjR%2FLg8ATG8%3D",
+        "url": "https://www.ebay.com/itm/366645328837?_skw=Psyduck+Japanese+promo+Komiya+Pokemon&hash=item555dc3bbc5:g:IHIAAeSwptdqmLxr&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZWabKJMZhcsT%2BCBZ1vFJQ%2BY0ni%2FUMSUnrog1sQLFb9ke9PiyLXllqI7Ibk1QRqyUf7B62fLe%2B0hPz2Scr2NIvivt8%2Fqr%2BiJHkiotLikeiG6vnkVYkaoXb0FPvOgntE%2FJbli2qCoMbJEnaHem6xeJ3M%2B%2BSQtgVVQqFHwFB8I52TUbWL5MRlciY6WUHzenqGR%2Ff1j8Yym48wxl8DBIVFmLnpR8CCVpfSrMX6emFRNiWuDGjQEwirAQv1SmVhIebbPQeyN9VqA%2BfjMo8e3gXhoQsLulSayxw6Vz7gNSvMjDGDgElhwn45Bo5MjWLfzz0kUMs%3D",
         "bids": 0,
         "ends": ""
       },
-      "listings": 27,
+      "listings": 29,
       "deal_count": 1,
       "best_discount_pct": 99,
-      "best_url": "https://www.ebay.com/itm/366645328837?_skw=Psyduck+Japanese+promo+Komiya+Pokemon&hash=item555dc3bbc5:g:IHIAAeSwptdqmLxr&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZWabKJMZhcsT%2BCBZ1vFJQ%2BY0ni%2FUMSUnrog1sQLFb9ke9PiyLXllqI7Ibk1QRqyUf7B62fLe%2B0hPz2Scr2NIvivt8%2Fqr%2BiJHkiotLikeiG6vnkVYkaoXb0FPvOgntE%2FJaKdfA3suNVs2gXERk7sxXCKHnyd5LFb9HbhR8OUGgdJef%2FH%2FNifzEWB5vqSnNmmOJlnnhwE0fHV3H1wVNVPySMoGp1KgQQL9zjTq23g4qfqXIOqdmm3g5qClqH7abBGI90%2Bo178mIxl2uImNe55ZtWMoydZRqzswFRLQvzg5Dsi87QtNN7gTCWsjR%2FLg8ATG8%3D",
+      "best_url": "https://www.ebay.com/itm/366645328837?_skw=Psyduck+Japanese+promo+Komiya+Pokemon&hash=item555dc3bbc5:g:IHIAAeSwptdqmLxr&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZWabKJMZhcsT%2BCBZ1vFJQ%2BY0ni%2FUMSUnrog1sQLFb9ke9PiyLXllqI7Ibk1QRqyUf7B62fLe%2B0hPz2Scr2NIvivt8%2Fqr%2BiJHkiotLikeiG6vnkVYkaoXb0FPvOgntE%2FJbli2qCoMbJEnaHem6xeJ3M%2B%2BSQtgVVQqFHwFB8I52TUbWL5MRlciY6WUHzenqGR%2Ff1j8Yym48wxl8DBIVFmLnpR8CCVpfSrMX6emFRNiWuDGjQEwirAQv1SmVhIebbPQeyN9VqA%2BfjMo8e3gXhoQsLulSayxw6Vz7gNSvMjDGDgElhwn45Bo5MjWLfzz0kUMs%3D",
       "image": "https://i.ebayimg.com/images/g/IHIAAeSwptdqmLxr/s-l225.jpg",
       "ref_image": "",
       "target_gbp": null,
@@ -10478,6 +10869,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 1998.17
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 1996.45
         }
       ]
     },
@@ -10721,6 +11116,10 @@
         {
           "date": "2026-09-12",
           "median_gbp": 64.7
+        },
+        {
+          "date": "2026-09-13",
+          "median_gbp": 64.69
         }
       ]
     }
